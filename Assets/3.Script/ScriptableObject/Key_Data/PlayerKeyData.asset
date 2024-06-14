@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc731ec6b43d733498cb6fca121d0aac, type: 3}
+  m_Name: PlayerKeyData
+  m_EditorClassIdentifier: 
+  _UpKey: 273
+  _DownKey: 274
+  _LeftKey: 276
+  _RightKey: 275
+  _JumpKey: 99
+  _AimKey: 118
+  _ShootKey: 122
+  _EXShootKey: 97
+  _SwitchWeaponKey: 304
+  _DashKey: 32

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d77a96b1d8e5e374c9a83c9d619c646e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cuphead Felix
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a384e29315e5d7048b6032a72cd8e723, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

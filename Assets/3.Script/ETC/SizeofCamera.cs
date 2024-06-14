@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SizeofCamera : MonoBehaviour
 {
-    [SerializeField] private Camera MainCamera;
+    [SerializeField] private Camera renderCamera;
+    [SerializeField] private bool isSetSize;
+    private SpriteRenderer textureRenderer;
     public Vector3 BottomLeft;
     public Vector3 BottomRight;
     public Vector3 TopLeft;
@@ -14,11 +16,12 @@ public class SizeofCamera : MonoBehaviour
 
     private void Start()
     {
-        
-        BottomLeft = MainCamera.ViewportToWorldPoint(new Vector3(0, 0, MainCamera.nearClipPlane));
-        BottomRight = MainCamera.ViewportToWorldPoint(new Vector3(1, 0, MainCamera.nearClipPlane));
-        TopLeft = MainCamera.ViewportToWorldPoint(new Vector3(0, 1, MainCamera.nearClipPlane));
-        TopRight = MainCamera.ViewportToWorldPoint(new Vector3(1, 1, MainCamera.nearClipPlane));
+        BottomLeft = renderCamera.ViewportToWorldPoint(new Vector3(0, 0, renderCamera.nearClipPlane));
+        BottomRight = renderCamera.ViewportToWorldPoint(new Vector3(1, 0, renderCamera.nearClipPlane));
+        TopLeft = renderCamera.ViewportToWorldPoint(new Vector3(0, 1, renderCamera.nearClipPlane));
+        TopRight = renderCamera.ViewportToWorldPoint(new Vector3(1, 1, renderCamera.nearClipPlane));
+        if (isSetSize)
+            ResizeTextureToCamera();
     }
     
     public Vector3 ClickPos(Vector3 MousePos)
@@ -28,11 +31,30 @@ public class SizeofCamera : MonoBehaviour
         //    // 마우스 위치를 스크린 좌표로 가져옴
         //    Vector3 MousePos = Input.mousePosition;
         // 카메라의 깊이를 지정하여 스크린 좌표를 월드 좌표로 변환
-        Vector3 worldPosition = MainCamera.ScreenToWorldPoint(new Vector3(MousePos.x, MousePos.y, MainCamera.transform.position.z * -1));
+        Vector3 worldPosition = renderCamera.ScreenToWorldPoint(new Vector3(MousePos.x, MousePos.y, renderCamera.transform.position.z * -1));
 
         //}
         return worldPosition;
     }
+    
+
+    private void ResizeTextureToCamera()
+    {
+        renderCamera = Camera.main;
+        textureRenderer = GetComponent<SpriteRenderer>();
+
+        float cameraY = renderCamera.orthographicSize * 2f;
+        float cameraX = cameraY * renderCamera.aspect;
+
+        float textureY = textureRenderer.bounds.size.y;
+        float textureX = textureRenderer.bounds.size.x;
+
+        float scaleX = cameraX / textureX;
+        float scaleY = cameraY / textureY;
+
+        textureRenderer.transform.localScale = new Vector3(scaleX, scaleY, 1f);
+    }
+
 
 
 }
