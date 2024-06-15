@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] Stage_Data stageData;
-    
-    
+    [SerializeField] protected Stage_Data stageData;
+    [SerializeField] protected float Jump_Force;
+    [SerializeField] protected float GravityScale;
+
+
     protected Movement2D move;
     protected SpriteRenderer spriteRenderer;
     protected Animator Anim;
@@ -17,11 +19,10 @@ public class Unit : MonoBehaviour
     protected int _CurrentHP;
     protected int _MaxHP;
 
-    protected float Jump_Force;
+    
 
 
     protected bool isDead = false;
-    protected bool isJump = false;
     protected bool isRun = false;
 
     public int MaxHP => _MaxHP;
@@ -32,7 +33,7 @@ public class Unit : MonoBehaviour
         isDead = true;
     }
 
-    protected void DontMoveLine(float LengthX, float LengthY)
+    protected void DontMoveScreen(float LengthX, float LengthY)
     {
         //플레이어가 화면범위 바깥으로 나가지 못하도록 설정
         transform.position =
@@ -60,7 +61,7 @@ public class Unit : MonoBehaviour
     protected void Jump()
     {
         Rigid.velocity = Vector2.zero;
-        Rigid.AddForce(new Vector2(0, Jump_Force));
+        Rigid.AddForce(new Vector2(0, Jump_Force),ForceMode2D.Impulse);
         Anim.SetBool("Jump", true);
     }
 
