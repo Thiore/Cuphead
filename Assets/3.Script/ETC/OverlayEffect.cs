@@ -9,6 +9,7 @@ public class OverlayEffect : MonoBehaviour
 {
     [SerializeField] private Material FXOverlayMaterial;
     [SerializeField] private Texture2D[] FXTex;
+    [SerializeField] private Texture2D[] FX2Tex;
     public float animationSpeed = 10.0f;  // 프레임 변경 속도
     private float currentFrame;
     private int lastFrame;
@@ -18,6 +19,7 @@ public class OverlayEffect : MonoBehaviour
         currentFrame = 0;
         lastFrame = 0;
         FXOverlayMaterial.SetTexture("_DustTex", FXTex[0]);
+        FXOverlayMaterial.SetTexture("_DustTex", FX2Tex[0]);
     }
 
     void Update()
@@ -36,7 +38,7 @@ public class OverlayEffect : MonoBehaviour
         }
 
 
-        FXOverlayMaterial.SetFloat("_DustFrame", currentFrame);
+        //FXOverlayMaterial.SetFloat("_DustFrame", currentFrame);
     }
 
     void OnRenderImage(RenderTexture src, RenderTexture dest)
@@ -54,5 +56,6 @@ public class OverlayEffect : MonoBehaviour
     private void SetFXTex(int currentFrame)
     {
         FXOverlayMaterial.SetTexture("_DustTex", FXTex[currentFrame]);
+        FXOverlayMaterial.SetTexture("_Dust2Tex", FX2Tex[currentFrame]);
     }    
 }

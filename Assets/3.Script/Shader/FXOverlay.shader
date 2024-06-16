@@ -4,7 +4,7 @@ Shader "Unlit/FXOverlay"
     {
         _MainTex("Base (RGB)", 2D) = "white" {}
         _DustTex("FX Texture", 2D) = "white" {}
-        _DustFrame("Dust Frame", float) = 0
+        _Dust2Tex("FX2 Texture", 2D) = "white" {}
     }
     SubShader
     {
@@ -33,9 +33,10 @@ Shader "Unlit/FXOverlay"
 
             sampler2D _MainTex;
             sampler2D _DustTex;
+            sampler2D _Dust2Tex;
             float4 _MainTex_ST;
             float4 _DustTex_ST;
-            float _DustFrame;
+            float4 _Dust2Tex_ST;
 
             v2f vert(appdata_t v)
             {
@@ -50,10 +51,21 @@ Shader "Unlit/FXOverlay"
                 fixed4 baseColor = tex2D(_MainTex, i.uv);
 
                 float2 dustUV = i.uv;
-                dustUV.y += _DustFrame / 127.0;
                 fixed4 dustColor = tex2D(_DustTex, dustUV);
+               
+                float2 dust2UV = i.uv;
+                fixed4 dust2Color = tex2D(_Dust2Tex, dust2UV);
 
-                return (baseColor*0.9) * dustColor;
+                if (dust2Color.a < 0.9)
+                {
+                    baseColor.rgb = (1 / dust2Color.a) * 0.8;
+                }
+
+                baseColor.rgb *= dustColor.rgb;
+
+                baseColor.rgb *= dustColor.a;
+
+                return baseColor;
             }
             ENDCG
         }

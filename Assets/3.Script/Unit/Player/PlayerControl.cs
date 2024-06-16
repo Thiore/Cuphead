@@ -11,7 +11,6 @@ public class PlayerControl : Unit
 
     private float x;
 
-    private bool isDash = false;
     private bool isJumpDash = false;
     private float Speed = 5f;
 
@@ -34,7 +33,6 @@ public class PlayerControl : Unit
     // Update is called once per frame
     void Update()
     {
-       
         Run();
         
         
@@ -42,7 +40,7 @@ public class PlayerControl : Unit
 
         Move_Horizontal();
         
-        if(!Anim.GetBool("Jump")&& !isDash)
+        if(!Anim.GetBool("Jump")&& Rigid.simulated)
         {
 
             if (Input.GetKeyDown(keyData.JumpKey))
@@ -69,15 +67,15 @@ public class PlayerControl : Unit
         }
 
         
-        if (Input.GetKeyDown(keyData.DashKey)&&!isDash&&!isJumpDash)
+        if (Input.GetKeyDown(keyData.DashKey)&& !isJumpDash)
         {
             isJumpDash = true;
-            //playerCol.enabled = false;
+            Rigid.simulated =false;
             if (Anim.GetBool("Jump"))
             {
                 
                 Anim.SetTrigger("Dash");
-                Rigid.gravityScale = 0f;
+                //Rigid.gravityScale = 0f;
                 StartCoroutine("Dash_Jump");
             }
             else
@@ -90,10 +88,8 @@ public class PlayerControl : Unit
 
 
         Flip(x);
-        if (!isDash && !Anim.GetBool("Jump"))
-        {
+
             move.MoveTo(new Vector3(x, y, 0), Speed);
-        }
             
 
     }
@@ -107,24 +103,26 @@ public class PlayerControl : Unit
     {
         if (Input.GetKey(keyData.LeftKey) && Input.GetKey(keyData.RightKey))
         {
-            x = 0;
+            if (Rigid.simulated)
+                x = 0;
             isRun = false;
         }
         else if (Input.GetKey(keyData.LeftKey))
         {
-            if(!isDash)
+            if(Rigid.simulated)
                 x = -1f;
             isRun = true;
         }
         else if (Input.GetKey(keyData.RightKey))
         {
-            if (!isDash)
+            if (Rigid.simulated)
                 x = 1f;
             isRun = true;
         }
         else
         {
-            x = 0;
+            if (Rigid.simulated)
+                x = 0;
             
             
             isRun = false;
@@ -145,64 +143,46 @@ public class PlayerControl : Unit
     private IEnumerator Dash_Jump()
     {
 
-        isDash = true;
-
-
-        if(spriteRenderer.flipX)
-            Rigid.velocity = new Vector2(-DashSpeed, 0f);
-        else
-            Rigid.velocity = new Vector2(DashSpeed, 0f);
-
-        
-
-
-        AnimatorStateInfo dashStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
-
-        float dashDuration = dashStateInfo.length;
-
-        yield return new WaitForSeconds(dashDuration);
-
-        Rigid.gravityScale = GravityScale;
-        Rigid.velocity = Vector2.zero; // Y축 속도를 0으로 설정하여 대시 후 떨어지도록 함
-
-        isDash = false;
-    }
-
-    private IEnumerator Dash()
-    {
-        
-        isDash = true;
-        Debug.Log("들어는오냐?");
-        float startTime = Time.time;
 
 
         if (spriteRenderer.flipX)
         {
             x = -1;
         }
-
         else
         {
             x = 1;
         }
         Speed = 10f;
 
-        AnimatorStateInfo dashStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
+        //AnimatorStateInfo dashStateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 
-        float dashDuration = dashStateInfo.length;
-        float endTime = Time.time + dashDuration;
-        while (Time.time < endTime)
-        {
-            
-            yield return null;
-        }
+        //float dashDuration = dashStateInfo.length;
+        // Debug.Log(dashDuration);
 
-        //yield return new WaitForSeconds(dashDuration);
-
-        //Rigid.velocity = Vector2.zero;
+        yield return new WaitForSeconds(0.333333f);
+        Rigid.simulated = true;
+        Rigid.velocity = Vector2.zero;
         Speed = 5f;
-        isDash = false;
+        yield break;
+    }
+
+    private IEnumerator Dash()
+    {
+        if (spriteRenderer.flipX)
+        {
+            x = -1;
+        }
+        else
+        {
+            x = 1;
+        }
+        Speed = 10f;
+
+        yield return new WaitForSeconds(0.3333333f);
+        Rigid.simulated = true;
         isJumpDash = false;
+        Speed = 5f;
         yield break;
     }
 

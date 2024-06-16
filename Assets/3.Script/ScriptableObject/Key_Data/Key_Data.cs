@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-enum Key
+public enum Key
 {
     Up = 0,
     Down,
@@ -49,34 +49,34 @@ public class Key_Data : ScriptableObject
         switch ((Key)ChangeKeyNum)
         {
             case Key.Up:
-                _UpKey = KeyCode.UpArrow;
+                _UpKey = keyCode;
                 break;
             case Key.Down:
-                _DownKey = KeyCode.DownArrow;
+                _DownKey = keyCode;
                 break;
             case Key.Left:
-                _LeftKey = KeyCode.LeftArrow;
+                _LeftKey = keyCode;
                 break;
             case Key.Right:
-                _RightKey = KeyCode.RightArrow;
+                _RightKey = keyCode;
                 break;
             case Key.Jump:
-                _JumpKey = KeyCode.C;
+                _JumpKey = keyCode;
                 break;
             case Key.Aim:
-                _AimKey = KeyCode.X;
+                _AimKey = keyCode;
                 break;
             case Key.Shoot:
-                _ShootKey = KeyCode.Z;
+                _ShootKey = keyCode;
                 break;
             case Key.EXShoot:
-                _EXShootKey = KeyCode.A;
+                _EXShootKey = keyCode;
                 break;
             case Key.Switch:
-                _SwitchWeaponKey = KeyCode.LeftShift;
+                _SwitchWeaponKey = keyCode;
                 break;
             case Key.Dash:
-                _DashKey = KeyCode.Space;
+                _DashKey = keyCode;
                 break;
         }
 
@@ -96,6 +96,45 @@ public class Key_Data : ScriptableObject
         _SwitchWeaponKey = KeyCode.LeftShift;
         _DashKey = KeyCode.Space;
                 
+    }
+
+    public KeyCode GetKey(Key CheckKey)
+    {
+        KeyCode keyCode = default;
+        switch (CheckKey)
+        {
+            case Key.Up:
+                keyCode = _UpKey;
+                break;
+            case Key.Down:
+                keyCode = _DownKey;
+                break;
+            case Key.Left:
+                keyCode = _LeftKey;
+                break;
+            case Key.Right:
+                keyCode = _RightKey;
+                break;
+            case Key.Jump:
+                keyCode = _JumpKey;
+                break;
+            case Key.Aim:
+                keyCode = _AimKey;
+                break;
+            case Key.Shoot:
+                keyCode = _ShootKey;
+                break;
+            case Key.EXShoot:
+                keyCode = _EXShootKey;
+                break;
+            case Key.Switch:
+                keyCode = _SwitchWeaponKey;
+                break;
+            case Key.Dash:
+                keyCode = _DashKey;
+                break;
+        }
+        return keyCode;
     }
 
 
