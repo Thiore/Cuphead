@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 enum settings
 {
@@ -72,6 +73,11 @@ public class Settings : MonoBehaviour
                 Back_text.color = SelectColor;
                 break;
         }
+    }
+
+    public void OnClickStartButton()
+    {
+        SceneManager.LoadScene("Intro");
     }
 
     public void Close()

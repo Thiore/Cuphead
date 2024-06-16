@@ -63,7 +63,7 @@ public class PressAnyButton : MonoBehaviour
 
         yield return new WaitForSeconds(FadeOutDuration);
 
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("Manu");
         
     }
 
