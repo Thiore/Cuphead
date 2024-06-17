@@ -54,15 +54,16 @@ public class Unit : MonoBehaviour
     protected void Run()
     {
         if (isRun)
-            Anim.SetBool("Run", true);
+            Anim.SetBool("isRun", true);
         else
-            Anim.SetBool("Run", false);
+            Anim.SetBool("isRun", false);
     }
     protected void Jump()
     {
         Rigid.velocity = Vector2.zero;
         Rigid.AddForce(new Vector2(0, Jump_Force),ForceMode2D.Impulse);
-        Anim.SetBool("Jump", true);
+        Anim.SetBool("isJump", true);
+        Debug.Log("³ª¾Èµé¾î¿È?");
     }
 
 }

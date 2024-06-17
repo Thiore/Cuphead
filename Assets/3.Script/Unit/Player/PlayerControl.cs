@@ -10,9 +10,11 @@ public class PlayerControl : Unit
     private Vector2 LastVelocity;
 
     private float x;
+    private float Speed = 5f;
 
     private bool isJumpDash = false;
-    private float Speed = 5f;
+    
+    
 
     //private float DashDistance = 12f;
     
@@ -39,8 +41,19 @@ public class PlayerControl : Unit
         float y = 0f;
 
         Move_Horizontal();
+
+        if(Input.GetKeyDown(keyData.DownKey))
+        {
+            Anim.SetBool("isDuck", true);
+        }
+        if (Input.GetKeyUp(keyData.DownKey))
+        {
+            Debug.Log("난언제을어옴?");
+            Anim.SetBool("isDuck", false);
+        }
+               
         
-        if(!Anim.GetBool("Jump")&& Rigid.simulated)
+        if(!Anim.GetBool("isJump") && Rigid.simulated)
         {
 
             if (Input.GetKeyDown(keyData.JumpKey))
@@ -52,7 +65,7 @@ public class PlayerControl : Unit
         }
         else
         {
-            if (Input.GetMouseButtonUp(0) && Rigid.velocity.y > 0)
+            if (Input.GetKeyUp(keyData.JumpKey) && Rigid.velocity.y > 0)
             {
                 Rigid.velocity = Rigid.velocity * 0.5f;
             }
@@ -71,7 +84,7 @@ public class PlayerControl : Unit
         {
             isJumpDash = true;
             Rigid.simulated =false;
-            if (Anim.GetBool("Jump"))
+            if (Anim.GetBool("isJump"))
             {
                 
                 Anim.SetTrigger("Dash");
@@ -134,16 +147,14 @@ public class PlayerControl : Unit
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log(collision.transform.name);
-            Anim.SetBool("Jump", false);
+            Anim.SetBool("isJump", false);
         if (isJumpDash)
             isJumpDash = false;
         
     }
-
+    #region 코루틴_대쉬
     private IEnumerator Dash_Jump()
     {
-
-
 
         if (spriteRenderer.flipX)
         {
@@ -185,5 +196,5 @@ public class PlayerControl : Unit
         Speed = 5f;
         yield break;
     }
-
+    #endregion
 }
