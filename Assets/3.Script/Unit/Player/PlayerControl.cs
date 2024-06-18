@@ -13,15 +13,17 @@ public class PlayerControl : Unit
     private float Speed = 5f;
 
     private bool isJumpDash = false;
+ 
     private bool isCurrentDir;
     private bool isLastDir;
     private bool isAnimTurn = false;
     private bool isZeroDuration = false;
     private bool isCanDir = true;
     private bool isAim = false;
-    private bool Up = false;
-    private bool Down = false;
+    private bool isUp = false; // Aim중 up이 true라면 아래키가 눌리지 않도록 하기 위해 사용
+    private bool isDown = false; // Aim중 down이 true라면 윗키가 눌리지 않도록하기 위해 사용
     private bool isDir = false;
+    private bool isDuck = false;
 
     private float AnimDuration;
 
@@ -64,10 +66,9 @@ public class PlayerControl : Unit
         
         Duck();
 
-        Move_Horizontal();
+        
 
-        if (!isCurrentDir.Equals(isLastDir) && !isAnimTurn)
-            Flip(x);
+       
 
         if (isAnimTurn)
         {
@@ -80,7 +81,9 @@ public class PlayerControl : Unit
 
             if (Input.GetKeyDown(keyData.JumpKey))
             {
-                isCanDir = true;
+                isDuck = false;
+                isAim = false;
+
                 Jump();
             }
 
@@ -113,7 +116,14 @@ public class PlayerControl : Unit
         {
             isAim = true;
         }
+
+        Move_Horizontal();
+
+        if (!isCurrentDir.Equals(isLastDir) && !isAnimTurn)
+            Flip(x);
+
         Dash();
+
         isLastDir = isCurrentDir;
 
         if (!Anim.GetBool(Anim_bDuck)||!Anim.GetInteger(Anim_iAim).Equals(0))
@@ -140,7 +150,7 @@ public class PlayerControl : Unit
 ;        }
         else if (Input.GetKey(keyData.LeftKey))
         {
-            if (isCanDir)
+            if (!isDuck)
             {
                 x = -1f;
                 isLeft = true;
@@ -151,7 +161,7 @@ public class PlayerControl : Unit
         }
         else if (Input.GetKey(keyData.RightKey))
         {
-            if (isCanDir)
+            if (!isDuck)
             {
                 x = 1f;
                 isLeft = false;
@@ -172,8 +182,8 @@ public class PlayerControl : Unit
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log(collision.transform.name);
-            Anim.SetBool(Anim_bJump, false);
+        isJump = false;
+        Anim.SetBool(Anim_bJump, isJump);
         if (isJumpDash)
             isJumpDash = false;
         
@@ -250,14 +260,18 @@ public class PlayerControl : Unit
     {
         if (Input.GetKeyDown(keyData.DownKey))
         {
-            isCanDir = false;
-            x = 0;
-            Anim.SetBool(Anim_bDuck, true);
+            isDuck = true;
+            Anim.SetBool(Anim_bDuck, isDuck);
         }
         if (Input.GetKeyUp(keyData.DownKey))
         {
-            isCanDir = true;
-            Anim.SetBool(Anim_bDuck, false);
+            isDuck = false;
+            Anim.SetBool(Anim_bDuck, isDuck);
+        }
+
+        if(isDuck)
+        {
+            x = 0;
         }
         
     }

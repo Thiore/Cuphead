@@ -23,6 +23,7 @@ public abstract class Unit : MonoBehaviour
 
     protected bool isDead = false;
     protected bool isRun = false;
+    protected bool isJump = false;
 
     protected bool isLeft = false;
 
@@ -35,7 +36,8 @@ public abstract class Unit : MonoBehaviour
     public void TakeDamage()
     {
         _CurrentHP -= 1;
-        isDead = true;
+        if(_CurrentHP<=0)
+            isDead = true;
     }
 
     protected void DontMoveScreen(float LengthX, float LengthY)
@@ -52,16 +54,13 @@ public abstract class Unit : MonoBehaviour
 
     protected void Run()
     {
-        if (isRun)
-            Anim.SetBool(Anim_bRun,true);
-        else
-            Anim.SetBool(Anim_bRun, false);
+        Anim.SetBool(Anim_bRun, isRun);
     }
     protected void Jump()
     {
         Rigid.velocity = Vector2.zero;
         Rigid.AddForce(new Vector2(0, Jump_Force),ForceMode2D.Impulse);
-        Anim.SetBool(Anim_bJump, true);
+        Anim.SetBool(Anim_bJump, isJump);
     }
 
 }
