@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour
+public abstract class Unit : MonoBehaviour
 {
     [SerializeField] protected Stage_Data stageData;
     [SerializeField] protected float Jump_Force;
@@ -19,11 +19,16 @@ public class Unit : MonoBehaviour
     protected int _CurrentHP;
     protected int _MaxHP;
 
-    
-
+    protected float x;
 
     protected bool isDead = false;
     protected bool isRun = false;
+
+    protected bool isLeft = false;
+
+    protected readonly int Anim_bRun = Animator.StringToHash("isRun");
+    protected readonly int Anim_bJump = Animator.StringToHash("isJump");
+    protected readonly int Anim_tDeath = Animator.StringToHash("Death");
 
     public int MaxHP => _MaxHP;
 
@@ -43,27 +48,20 @@ public class Unit : MonoBehaviour
                 0);
     }
 
-    protected void Flip(float x)
-    {
-        if (x < 0)
-            spriteRenderer.flipX = true;
-        if (x > 0)
-            spriteRenderer.flipX = false;
-    }
+    protected abstract void Flip(float x);
 
     protected void Run()
     {
         if (isRun)
-            Anim.SetBool("isRun", true);
+            Anim.SetBool(Anim_bRun,true);
         else
-            Anim.SetBool("isRun", false);
+            Anim.SetBool(Anim_bRun, false);
     }
     protected void Jump()
     {
         Rigid.velocity = Vector2.zero;
         Rigid.AddForce(new Vector2(0, Jump_Force),ForceMode2D.Impulse);
-        Anim.SetBool("isJump", true);
-        Debug.Log("³ª¾Èµé¾î¿È?");
+        Anim.SetBool(Anim_bJump, true);
     }
 
 }
