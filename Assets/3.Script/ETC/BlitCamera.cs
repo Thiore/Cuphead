@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class BlitCamera : MonoBehaviour
 {
-    [SerializeField] private RenderTexture renderTexture;
+    [SerializeField] private RenderTexture sourTexture;
+    [SerializeField] private RenderTexture destTexture;
+
+   
+
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Graphics.Blit(renderTexture, destination);
+            Graphics.Blit(sourTexture, destTexture);
+
     }
 }

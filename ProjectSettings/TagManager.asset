@@ -32,12 +32,12 @@ TagManager:
   - 
   - 
   - 
+  - TextUI
   - 
   - 
-  - 
-  - 
-  - GameView
   - FinalView
+  - GameView
+  - TextView
   - BackGroundView
   m_SortingLayers:
   - name: Default
@@ -48,6 +48,9 @@ TagManager:
     locked: 0
   - name: Obstacle
     uniqueID: 3411152555
+    locked: 0
+  - name: Player
+    uniqueID: 2785005009
     locked: 0
   - name: Effect
     uniqueID: 2655299571
