@@ -137,10 +137,9 @@ public class PlayerControl : Unit
 
     private void LateUpdate()
     {
-        
+
         //DontMoveScreen(0f,2f);
-        //WallofCollider();
-        //DontMoveWall();
+        ObstacleofRaycast();
     }
 
     private void Move_Horizontal()
@@ -234,8 +233,8 @@ public class PlayerControl : Unit
             }
             yield return null;
         }
-        Debug.Log(AnimDuration);
-        Debug.Log(AnimDuration - (AnimDuration * 0.1f));
+       // Debug.Log(AnimDuration);
+        //Debug.Log(AnimDuration - (AnimDuration * 0.1f));
         yield return new WaitForSeconds(AnimDuration-(AnimDuration*0.1f));
         isDash = false;
         Rigid.gravityScale = GravityScale;
@@ -259,8 +258,8 @@ public class PlayerControl : Unit
             }
             yield return null;
         }
-        Debug.Log(AnimDuration);
-        Debug.Log(AnimDuration - (AnimDuration * 0.1f));
+        //Debug.Log(AnimDuration);
+        //Debug.Log(AnimDuration - (AnimDuration * 0.1f));
         yield return new WaitForSeconds(AnimDuration - (AnimDuration * 0.1f));
         isDash = false;
         Rigid.simulated = true;        
@@ -338,7 +337,7 @@ public class PlayerControl : Unit
         Anim.SetBool(Anim_bJump, isJump);
         isDashGround = true;
 
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
 
         //CollisionX = collision.contacts[0].point.x;
         //isCollisionX = true;

@@ -34,15 +34,12 @@ Shader "Unlit/FXOverlay"
             sampler2D _MainTex;
             sampler2D _DustTex;
             sampler2D _Dust2Tex;
-            float4 _MainTex_ST;
-            float4 _DustTex_ST;
-            float4 _Dust2Tex_ST;
 
             v2f vert(appdata_t v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.uv = v.uv;
                 return o;
             }
 

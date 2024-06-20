@@ -40,7 +40,9 @@ public class SizeofCamera : MonoBehaviour
 
     private void ResizeTextureToCamera()
     {
-        renderCamera = Camera.main;
+        if(renderCamera == null)
+            renderCamera = Camera.main;
+
         textureRenderer = GetComponent<SpriteRenderer>();
 
         float cameraY = renderCamera.orthographicSize * 2f;

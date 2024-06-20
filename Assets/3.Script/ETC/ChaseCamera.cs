@@ -6,8 +6,11 @@ public class ChaseCamera : MonoBehaviour
 {
     [SerializeField] private Camera renderCamera;
 
-    private void Update()
+    
+
+    private void LateUpdate()
     {
-        transform.position = renderCamera.transform.position;
+        transform.position = new Vector2(renderCamera.transform.position.x, renderCamera.transform.position.y);
     }
+
 }

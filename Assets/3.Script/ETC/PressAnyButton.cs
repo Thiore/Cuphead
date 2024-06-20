@@ -46,7 +46,7 @@ public class PressAnyButton : MonoBehaviour
             currentColor.a = isOn;
             outline.effectColor = currentColor;
         }
-        Debug.Log("Time " + Time.time + "Last " + LastTime);
+        
 
         if(Input.anyKeyDown)
         {
