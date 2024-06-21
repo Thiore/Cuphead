@@ -86,7 +86,7 @@ public abstract class Unit : MonoBehaviour
         //Debug.Log("Ray"+RayDistance);
 
         Vector3 posi = transform.position;
-        posi.y = posi.y + 0.3f;
+        posi.y = posi.y + 0.5f;
         RaycastHit2D hitLeft = Physics2D.Raycast(posi, Vector2.left, RayDistance, Obstacle);
         RaycastHit2D hitRight = Physics2D.Raycast(posi, Vector2.right, RayDistance, Obstacle);
         //Debug.Log("Player" + transform.position + " 콜라이더" + boxCol.transform.position);
@@ -97,14 +97,14 @@ public abstract class Unit : MonoBehaviour
 
         if (hitLeft.collider != null)
         {
-            minX = hitLeft.point.x + RayDistance;
-            Debug.Log(minX);
+            minX = hitLeft.point.x + RayDistance*0.7f;
+            //Debug.Log(minX);
         }
         
         if(hitRight.collider != null)
         {
-            maxX = hitRight.point.x - RayDistance*0.5f;
-            Debug.Log(maxX);
+            maxX = hitRight.point.x - RayDistance*0.7f;
+            //Debug.Log(maxX);
         }
         //Debug.Log(minX +" " + maxX);
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
