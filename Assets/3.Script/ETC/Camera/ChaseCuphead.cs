@@ -11,7 +11,7 @@ public class ChaseCuphead : MonoBehaviour
     private void Update()
     {
         Vector3 pos = transform.position;
-        pos.x = Mathf.Lerp(transform.position.x, Cuphead.transform.position.x, 0.1f);
+        pos.x = Mathf.Lerp(transform.position.x, Cuphead.transform.position.x, 0.02f);
         transform.position = pos;
     }
     private void LateUpdate()

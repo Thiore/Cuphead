@@ -503,7 +503,7 @@ public class PlayerControl : Unit
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.contacts[0].normal.y);
+        //Debug.Log(collision.contacts[0].normal.y);
         if (Mathf.Abs(collision.contacts[0].normal.y - 1f) < 0.1f)
         {
             isJump = false;
