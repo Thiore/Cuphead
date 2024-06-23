@@ -20,8 +20,8 @@ TagManager:
   - Enemy
   - Parry
   - Interaction
-  - 
-  - 
+  - Bullet
+  - HitCollider
   - 
   - 
   - 
@@ -51,6 +51,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2785005009
+    locked: 0
+  - name: Bullet
+    uniqueID: 2485426329
     locked: 0
   - name: Effect
     uniqueID: 2655299571

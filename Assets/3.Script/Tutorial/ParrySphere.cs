@@ -13,6 +13,7 @@ public class ParrySphere : MonoBehaviour
     [SerializeField] private bool isParryOn;
 
     private SpriteRenderer spriteRenderer;
+    private CircleCollider2D parryCol;
 
     private bool isLastParry;
 
@@ -33,6 +34,7 @@ public class ParrySphere : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        parryCol = GetComponent<CircleCollider2D>();
         LastTime = Time.time;
         isLastParry = isParryOn;
     }
@@ -50,10 +52,15 @@ public class ParrySphere : MonoBehaviour
             isLastParry = isParryOn;
             if (isParryOn)
             {
+                parryCol.enabled = true;
                 spriteRenderer.sprite = OnParry;
             }
             else
+            {
+                parryCol.enabled = false;
                 spriteRenderer.sprite = OffParry;
+            }
+               
         }
 
         

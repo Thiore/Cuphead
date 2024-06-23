@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: d4fd5462945a16145b29ec415044760b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1152628508112146077
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_0
+  - first:
+      213: 674502935692083843
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_1
+  - first:
+      213: 5977741213767227884
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_2
+  - first:
+      213: -7137024848832592635
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_3
+  - first:
+      213: -4198016573993349618
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_4
+  - first:
+      213: -8674406154705518851
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_5
+  - first:
+      213: 2925887849038313242
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_6
+  - first:
+      213: 6130606766208106710
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_7
+  - first:
+      213: 471010460472904501
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_8
+  - first:
+      213: -7864011297151578111
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_9
+  - first:
+      213: -2192389117530878209
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_10
+  - first:
+      213: -4161355665839754716
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_11
+  - first:
+      213: -8992553601159565930
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_12
+  - first:
+      213: 2430925680070241522
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_13
+  - first:
+      213: 2926384080401375485
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_14
+  - first:
+      213: -3664628290620065081
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_15
+  - first:
+      213: -742528992343221864
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_16
+  - first:
+      213: 3568355835737178353
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_17
+  - first:
+      213: -28143487710678371
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_18
+  - first:
+      213: 4938412915525670688
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_19
+  - first:
+      213: -7299504559455799278
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_20
+  - first:
+      213: 3871287382310090718
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_21
+  - first:
+      213: 4590646778595868801
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_22
+  - first:
+      213: 6473407562286606525
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_23
+  - first:
+      213: 1980876841507251056
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_24
+  - first:
+      213: 6569952331169207856
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_25
+  - first:
+      213: -6666468715690954133
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_26
+  - first:
+      213: -1643892973604937263
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_27
+  - first:
+      213: 3224484060958283964
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_28
+  - first:
+      213: -6395965612232125324
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_29
+  - first:
+      213: -7098084274092432093
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_32
+  - first:
+      213: 8856157896204266111
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_33
+  - first:
+      213: -4301772640422796484
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_34
+  - first:
+      213: 7655255591667921994
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_38
+  - first:
+      213: -4938979060792689414
+    second: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_44
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1977
+        width: 58
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361bcff8a7a0100f0800000000000000
+      internalID: -1152628508112146077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1968
+        width: 63
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38282e9a8d05c5900800000000000000
+      internalID: 674502935692083843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1959
+        width: 89
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9dec566f335f250800000000000000
+      internalID: 5977741213767227884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1949
+        width: 99
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505823ca6b134fc90800000000000000
+      internalID: -7137024848832592635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1907
+        width: 53
+        height: 35
+      alignment: 9
+      pivot: {x: 0.7, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e8ce10b26adb5c0800000000000000
+      internalID: -4198016573993349618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1903
+        width: 155
+        height: 39
+      alignment: 9
+      pivot: {x: 0.88, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfeb05faf815e9780800000000000000
+      internalID: -8674406154705518851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_6
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 1900
+        width: 146
+        height: 42
+      alignment: 9
+      pivot: {x: 0.87, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a177f862f77da9820800000000000000
+      internalID: 2925887849038313242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_7
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 1387
+        width: 420
+        height: 177
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0c07d5f5a441550800000000000000
+      internalID: 6130606766208106710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1904
+        width: 73
+        height: 38
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b0bfda48d598600800000000000000
+      internalID: 471010460472904501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_9
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1903
+        width: 142
+        height: 39
+      alignment: 9
+      pivot: {x: 0.87, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1001f9bf36b6dd290800000000000000
+      internalID: -7864011297151578111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1896
+        width: 157
+        height: 46
+      alignment: 9
+      pivot: {x: 0.87, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffec320a6b11391e0800000000000000
+      internalID: -2192389117530878209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1899
+        width: 134
+        height: 43
+      alignment: 9
+      pivot: {x: 0.85, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422ff89d115ef36c0800000000000000
+      internalID: -4161355665839754716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_12
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 1907
+        width: 120
+        height: 35
+      alignment: 9
+      pivot: {x: 0.85, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d6933f428043380800000000000000
+      internalID: -8992553601159565930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_13
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1802
+        width: 91
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc26f3c6026cb120800000000000000
+      internalID: 2430925680070241522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_14
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1382
+        width: 392
+        height: 182
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0aea401da9c9820800000000000000
+      internalID: 2926384080401375485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_15
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 1382
+        width: 435
+        height: 182
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca7eb75cff942dc0800000000000000
+      internalID: -3664628290620065081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1823
+        width: 78
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89914f7c0d102b5f0800000000000000
+      internalID: -742528992343221864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_17
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1728
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f08e450ab8558130800000000000000
+      internalID: 3568355835737178353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_18
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1652
+        width: 230
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92b344a5a30c9ff0800000000000000
+      internalID: -28143487710678371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_19
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1621
+        width: 255
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027db10c164c88440800000000000000
+      internalID: 4938412915525670688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_20
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1613
+        width: 257
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218fa411743f2ba90800000000000000
+      internalID: -7299504559455799278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_21
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1373
+        width: 463
+        height: 191
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed77b0efc5399b530800000000000000
+      internalID: 3871287382310090718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1168
+        width: 400
+        height: 198
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1808f7f3ce045bf30800000000000000
+      internalID: 4590646778595868801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_23
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 1171
+        width: 441
+        height: 195
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8ab6c51e926d950800000000000000
+      internalID: 6473407562286606525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_24
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1172
+        width: 406
+        height: 194
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07366d10efc7d7b10800000000000000
+      internalID: 1980876841507251056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_25
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 1187
+        width: 413
+        height: 179
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036179a06d82d2b50800000000000000
+      internalID: 6569952331169207856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 880
+        width: 300
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b627cf60602fb73a0800000000000000
+      internalID: -6666468715690954133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_27
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 785
+        width: 403
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1648bdc08bf29e0800000000000000
+      internalID: -1643892973604937263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_28
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 751
+        width: 446
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8d35d5b2bafbc20800000000000000
+      internalID: 3224484060958283964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_29
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 726
+        width: 490
+        height: 435
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4745a47b927fc37a0800000000000000
+      internalID: -6395965612232125324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 267
+        width: 511
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3252fe0c5f98e7d90800000000000000
+      internalID: -7098084274092432093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_33
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 840
+        width: 350
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7aa6064fa467ea70800000000000000
+      internalID: 8856157896204266111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_34
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 253
+        width: 521
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33ea1743980d44c0800000000000000
+      internalID: -4301772640422796484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_38
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 250
+        width: 474
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44703eb66eec3a60800000000000000
+      internalID: 7655255591667921994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Peashooter_44
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 241
+        width: 502
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcfb5846b8357bb0800000000000000
+      internalID: -4938979060792689414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

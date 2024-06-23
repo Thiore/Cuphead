@@ -65,7 +65,7 @@ public abstract class Unit : MonoBehaviour
         if (!Anim.GetBool(Anim_bRun).Equals(isRun))
             Anim.SetBool(Anim_bRun, isRun);
     }
-    protected void Jump()
+    protected virtual void Jump()
     {
         Rigid.velocity = Vector2.zero;
         Rigid.AddForce(new Vector2(0, Jump_Force),ForceMode2D.Impulse);
@@ -76,8 +76,16 @@ public abstract class Unit : MonoBehaviour
     {
         Vector2 size = spriteRenderer.sprite.bounds.size;
         Vector2 pos = transform.position;
-        boxCol.size = size;
-        boxCol.transform.position = new Vector2(pos.x, pos.y + (size.y * 0.5f));
+        if(size.x>size.y)
+        {
+            capCol.direction = CapsuleDirection2D.Horizontal;
+        }
+        else
+        {
+            capCol.direction = CapsuleDirection2D.Vertical;
+        }
+        capCol.size = size;
+        capCol.transform.position = new Vector2(pos.x, pos.y + (size.y * 0.5f));
         //Debug.Log("spritesize"+ size);
     }
     protected void ObstacleofRaycast()

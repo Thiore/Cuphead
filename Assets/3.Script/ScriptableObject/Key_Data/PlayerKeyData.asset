@@ -17,7 +17,7 @@ MonoBehaviour:
   _LeftKey: 276
   _RightKey: 275
   _JumpKey: 99
-  _AimKey: 118
+  _AimKey: 120
   _ShootKey: 122
   _EXShootKey: 97
   _SwitchWeaponKey: 304

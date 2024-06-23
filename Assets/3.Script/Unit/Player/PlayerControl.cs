@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,10 @@ public class PlayerControl : Unit
     [SerializeField] private Key_Data keyData;
     [SerializeField] private float DashSpeed;
     [SerializeField] private GameObject WallCollider;
+    [SerializeField] private GameObject Weapon;
     private GameObject ClearPlatformObject;
-
+    private Animator WeaponAnim;
+    private PlayerWeapon playerWeapon;
     //private Vector2 LastVelocity;
 
     
@@ -23,6 +26,8 @@ public class PlayerControl : Unit
     private bool isLeft = false;
     private bool isRight = false;
     private bool isRunDiagonal = false;
+    private bool isParry = false;
+    private bool isCountParry = false;
    
     private bool isDuck = false;
     private bool isAttack = false;
@@ -42,7 +47,7 @@ public class PlayerControl : Unit
 
 
     private readonly int Anim_iAim = Animator.StringToHash("Aim");
-    //private readonly int Anim_tParry = Animator.StringToHash("Parry");
+    private readonly int Anim_bParry = Animator.StringToHash("isParry");
     private readonly int Anim_tTurn = Animator.StringToHash("Turn");
     private readonly int Anim_bDuck = Animator.StringToHash("isDuck");
     private readonly int Anim_bRunDiagonalOn = Animator.StringToHash("isRunDiagonalOn");
@@ -50,15 +55,14 @@ public class PlayerControl : Unit
     private readonly int Anim_tDash = Animator.StringToHash("Dash");
 
 
-    private readonly bool[] ClearAimDir = { false, false, false };
 
-    private Coroutine dashCorutin = null;
+    private Coroutine dashCorutine = null;
+    private Coroutine parryCorutine = null;
 
     private AnimatorStateInfo StateInfo;
 
     
 
-    public bool ISDir=>isLastDir;
 
     public bool ClearPlatform { set { isClearPlatform = value; } }
 
@@ -67,12 +71,13 @@ public class PlayerControl : Unit
     {
         move = GetComponent<Movement2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        boxCol = WallCollider.GetComponent<BoxCollider2D>();
-        capCol = GetComponent<CapsuleCollider2D>();
+        //boxCol = WallCollider.GetComponent<BoxCollider2D>();
+        capCol = WallCollider.GetComponent<CapsuleCollider2D>();
         Anim = GetComponent<Animator>();
         Rigid = GetComponent<Rigidbody2D>();
         playerCol = GetComponent<BoxCollider2D>();
-
+        WeaponAnim = Weapon.GetComponent<Animator>();
+        playerWeapon = Weapon.GetComponent<PlayerWeapon>();
         isCurrentDir = isLastDir;
         
     }
@@ -89,87 +94,34 @@ public class PlayerControl : Unit
         //MyPosition = transform.position;
         StateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 
+        Reset();
+
         
+            Run();
 
-
-        Run();
-
-        if(!isDuck)
+        if(!isDuck&&!isJump)
             Aim();
 
         if(!isAim)
             Duck();
 
-        if (isAnimTurn)
-        {
-            Anim_Turn();
-        }
+        Jump();
 
-        if(!isDash)
-        {
-            if (!isJump)
-            {
-                if (Input.GetKey(keyData.DownKey))
-                {
-                    if (Input.GetKeyDown(keyData.JumpKey))
-                    {
-                        if (isClearPlatform)
-                        {
-                            BoxCollider2D ClearBox = ClearPlatformObject.GetComponent<BoxCollider2D>();
-                            float PlayerX = spriteRenderer.sprite.bounds.size.x;
-                            float ClearBoxX = ClearBox.size.x*0.5f;
-                            Debug.Log((transform.position.x));
-                            Debug.Log((ClearBox.transform.position.x));
-                            Debug.Log((PlayerX));
-                            Debug.Log((ClearBoxX));
-                            if (transform.position.x-PlayerX>ClearBox.transform.position.x-ClearBoxX
-                                && transform.position.x + PlayerX < ClearBox.transform.position.x + ClearBoxX)
-                            {
-                                ClearPlatformObject.GetComponent<ClearPlatform>().CheckTrigger = true;
-                                isJump = true;
-                                Anim.SetBool(Anim_bJump, isJump);
-                            }
-                            
-                        }
-                        else
-                        {
-                            isJump = true;
-                            Jump();
-                        }
-                    }
-                }
-                else
-                {
-                    if (Input.GetKeyDown(keyData.JumpKey))
-                    {
-                        isJump = true;
-                        Jump();
-                    }
-                }
-            }
-            else
-            {
-                if (Input.GetKeyUp(keyData.JumpKey) && Rigid.velocity.y > 0)
-                {
-                    Rigid.velocity = Rigid.velocity * 0.5f;
-                }
-
-                if (Input.GetKeyDown(keyData.JumpKey))
-                {
-                    //parry
-                }
-            }
-        }
+        
         
 
-        if (Input.GetKeyDown(keyData.ShootKey))
+        if (Input.GetKeyDown(keyData.ShootKey)&&!isDash)
         {
+            
+            //playerWeapon.StartAttack_co();
+
             isAttack = true;
             Anim.SetBool(Anim_bAttack, isAttack);
-            
         }
+        
         if (Input.GetKeyUp(keyData.ShootKey))
         {
+            //playerWeapon.StopAttack_co();
             isAttack = false;
             Anim.SetBool(Anim_bAttack, isAttack);
         }
@@ -177,24 +129,54 @@ public class PlayerControl : Unit
         {
             isRunDiagonal = true;
             Anim.SetBool(Anim_bRunDiagonalOn, isRunDiagonal);
-
         }
         else
         {
             isRunDiagonal = false;
             Anim.SetBool(Anim_bRunDiagonalOn, isRunDiagonal);
         }
-
-        Dash();
+        if(!isAnimTurn)
+            Dash();
 
         if (!isCurrentDir.Equals(isLastDir) && !isAnimTurn)
             Flip(x);
 
+        if (isAnimTurn)
+        {
+            Anim_Turn();
+        }
 
+        if (isAttack)
+        {
+            if (StateInfo.IsName("Jump"))
+            {
+                JumpShoot();
+            }
+            else
+            {
+                SetShootDir();
+            }
+               
+                //WeaponAnim.SetBool("Shoot", true);
+           
+        }
+        else
+        {
+                WeaponAnim.SetBool("Shoot", false);
+                Weapon.transform.localPosition = Vector3.zero;
+                Weapon.transform.localRotation = Quaternion.identity;
+               // playerWeapon.StopAttack_co();
+            
+                
+        }
         
 
         isLastDir = isCurrentDir;
         WallofCollider();
+
+        
+
+
         move.MoveTo(new Vector3(x, y, 0), Speed);
     }
 
@@ -226,7 +208,13 @@ public class PlayerControl : Unit
                     Anim.SetTrigger(Anim_tTurn);
                 }
             }
+
+            isRun = false;
+            if (!isAim && !isDuck && !isJump)
                 isRun = true;
+            
+                
+                
         }
         else if (Input.GetKey(keyData.RightKey))
         {
@@ -243,7 +231,9 @@ public class PlayerControl : Unit
                 }
             }
 
-            isRun = true;
+            isRun = false;
+            if (!isAim && !isDuck && !isJump)
+                isRun = true;
         }
         else
         {
@@ -253,29 +243,127 @@ public class PlayerControl : Unit
         }
     }
 
-   
 
-    
+    protected override void Jump()
+    {
+        if (!isDash)
+        {
+            if (!isJump)
+            {
+                if (Input.GetKey(keyData.DownKey))
+                {
+                    if (Input.GetKeyDown(keyData.JumpKey))
+                    {
+                        Anim.SetInteger(Anim_iAim, 0);
+                        if (isClearPlatform)
+                        {
+                            BoxCollider2D ClearBox = ClearPlatformObject.GetComponent<BoxCollider2D>();
+                            float PlayerX = spriteRenderer.sprite.bounds.size.x;
+                            float ClearBoxX = ClearBox.size.x * 0.5f;
+                            if (transform.position.x - PlayerX > ClearBox.transform.position.x - ClearBoxX
+                                && transform.position.x + PlayerX < ClearBox.transform.position.x + ClearBoxX)
+                            {
+                                ClearPlatformObject.GetComponent<ClearPlatform>().CheckTrigger = true;
+                                isJump = true;
+                                Anim.SetBool(Anim_bJump, isJump);
+                            }
+
+                        }
+                        else
+                        {
+                            isJump = true;
+                            base.Jump();
+                        }
+                    }
+                }
+                else
+                {
+                    if (Input.GetKeyDown(keyData.JumpKey))
+                    {
+                        Anim.SetInteger(Anim_iAim, 0);
+                        isJump = true;
+                        base.Jump();
+                    }
+                }
+            }
+            else
+            {
+                if(StateInfo.IsName("Jump"))
+                {
+                    if (Input.GetKeyUp(keyData.JumpKey) && Rigid.velocity.y > 0)
+                    {
+                        Rigid.velocity = Rigid.velocity * 0.5f;
+                    }
+
+                    
+
+                    if (Input.GetKeyDown(keyData.JumpKey)&&!isCountParry)
+                    {
+                        isParry = true;
+                        isCountParry = true;
+                        Anim.SetBool(Anim_bParry, isParry);
+                        StartCoroutine(Parry_co());
+                    }
+                }
+            }
+        }
+    }
+
+    private IEnumerator Parry_co()
+    {
+        
+        while (!isZeroDuration)
+        {
+            if (StateInfo.IsName("Parry"))
+            {
+                isZeroDuration = true;
+                AnimDuration = StateInfo.length;
+
+            }
+            yield return null;
+        }
+
+        isZeroDuration = false;
+        yield return new WaitForSeconds(AnimDuration - (AnimDuration * 0.1f));
+        isParry = false;
+        parryCorutine = null;
+        Anim.SetBool(Anim_bParry, isParry);
+        yield break;
+    }
+
+
     #region 措浆
     private void Dash()
     {
-        if (dashCorutin == null && isDashGround)
+        if (dashCorutine == null && isDashGround)
         {
             if (Input.GetKeyDown(keyData.DashKey))
             {
+                if(StateInfo.IsName("Parry"))
+                {
+                    isZeroDuration = false;
+                    isParry = false;
+                    Anim.SetBool(Anim_bParry, isParry);
+                    isCountParry = false;
+                    StopCoroutine(Parry_co());
+                    parryCorutine = null;
+                }
                 isDash = true;
+                isAttack = false;
+                //playerWeapon.StopAttack_co();
+                Anim.SetBool(Anim_bAttack, isAttack);
                 //Rigid.simulated = false;
                 isLastDir = isCurrentDir;
 
                 if (Anim.GetBool(Anim_bJump))
                 {
                     Anim.SetTrigger(Anim_tDash);
-                    dashCorutin = StartCoroutine("Dash_Jump");
+                    dashCorutine = StartCoroutine(Dash_Jump_co());
                 }
                 else
                 {
                     Anim.SetTrigger(Anim_tDash);
-                    dashCorutin = StartCoroutine("Dash_Ground");
+                    dashCorutine = StartCoroutine(Dash_Ground_co());
                 }
 
                 Speed = 10f;
@@ -295,7 +383,7 @@ public class PlayerControl : Unit
         }
 
     }
-    private IEnumerator Dash_Jump()
+    private IEnumerator Dash_Jump_co()
     {
         Rigid.gravityScale = 0f;
         Rigid.velocity = Vector2.zero;
@@ -317,11 +405,11 @@ public class PlayerControl : Unit
         Rigid.velocity = Vector2.zero;
         Speed = 5f;
         isZeroDuration = false;
-        dashCorutin = null;
+        dashCorutine = null;
         yield break;
     }
 
-    private IEnumerator Dash_Ground()
+    private IEnumerator Dash_Ground_co()
     {
         Rigid.gravityScale = 0f;
         Rigid.velocity = Vector2.zero;
@@ -345,7 +433,7 @@ public class PlayerControl : Unit
         Rigid.simulated = true;        
         Speed = 5f;
         isZeroDuration = false;
-        dashCorutin = null;
+        dashCorutine = null;
         yield break;
     }
     #endregion
@@ -353,7 +441,7 @@ public class PlayerControl : Unit
 
     private void Duck()
     {
-        if (Input.GetKeyDown(keyData.DownKey))
+        if (Input.GetKey(keyData.DownKey))
         {
             isDuck = true;
             Anim.SetBool(Anim_bDuck, isDuck);
@@ -401,75 +489,75 @@ public class PlayerControl : Unit
     }
     private void Aim()
     {
-        if (Input.GetKeyDown(keyData.AimKey) && !isDuck && !isDash && !isJump)
+        if (Input.GetKey(keyData.AimKey))
         {
             isAim = true;
-
+            
         }
         if (Input.GetKeyUp(keyData.AimKey))
         {
-            isAimDir = ClearAimDir;
-            isAim = false;
             AimDir = 0;
+            isAim = false;
+            
         }
         if (isAim)
         {
             SetAim();
-            Anim.SetInteger(Anim_iAim, AimDir);
+            
             x = 0;
+            
         }
-        else
-            Anim.SetInteger(Anim_iAim, 0);
+            Anim.SetInteger(Anim_iAim, AimDir);
     }
     private void SetAim()
     {
-        if ((Input.GetKeyDown(keyData.RightKey))&&!isLeft)
+        if ((Input.GetKey(keyData.RightKey))&&!isLeft)
         {
             isAimDir[0] = true;
             isRight = true;
         }
-        if (Input.GetKeyUp(keyData.RightKey) && isAimDir[0] && !isLeft && isRight)
+        if (Input.GetKeyUp(keyData.RightKey) && !isLeft && isRight)
         {
             isAimDir[0] = false;
             isRight = false;
-            AimDir -= StraightAim;
+            
         }
 
-        if (Input.GetKeyDown(keyData.LeftKey) && !isRight)
+        if (Input.GetKey(keyData.LeftKey) && !isRight)
         {
             isAimDir[0] = true;
             isLeft = true;
         }
-        if (Input.GetKeyUp(keyData.LeftKey) && isAimDir[0] && !isRight && isLeft)
+        if (Input.GetKeyUp(keyData.LeftKey) && !isRight && isLeft)
         {
             isAimDir[0] = false;
             isLeft = false;
-            AimDir -= StraightAim;
+            
         }
 
-        if (Input.GetKeyDown(keyData.UpKey)&&!isDown)
+        if (Input.GetKey(keyData.UpKey)&&!isDown)
         {
             isAimDir[1] = true;
             isUp = true;
             
         }
-        if(Input.GetKeyUp(keyData.UpKey)&& isAimDir[1]&&!isDown&&isUp)
+        if(Input.GetKeyUp(keyData.UpKey)&& !isDown&&isUp)
         {
             isAimDir[1] = false;
             isUp = false;
-            AimDir -= UpAim;
+           
         }
 
-        if (Input.GetKeyDown(keyData.DownKey) && !isUp)
+        if (Input.GetKey(keyData.DownKey) && !isUp)
         {
             isAimDir[2] = true;
             isDown = true;
         }
-        if (Input.GetKeyUp(keyData.DownKey) && isAimDir[2] && !isUp&& isDown)
+        if (Input.GetKeyUp(keyData.DownKey) && !isUp&& isDown)
         {
             isAimDir[2] = false;
             isDown = false;
-            AimDir -= DownAim;
+           
         }
 
         if (!isAimDir[0] && !isAimDir[1] && !isAimDir[2])
@@ -501,6 +589,233 @@ public class PlayerControl : Unit
         }
     }
 
+    private void SetShootDir()
+    {
+        if (StateInfo.IsName("DuckShoot")|| StateInfo.IsName("RunShooting_Straight") || StateInfo.IsName("Shooting_Straight"))
+        {
+            SetWeaponPos();
+            if (spriteRenderer.flipX)// 哭率
+            {
+                Weapon.transform.localRotation = Quaternion.Euler(0, 0, 180f);
+                
+            }
+            Weapon.transform.localPosition = Weapon.transform.right*capCol.size.x * 0.6f;
+        }
+        else if(StateInfo.IsName("RunShooting_DiagonalUp")||StateInfo.IsName("Shooting_DiagonalUp"))
+        {
+            SetWeaponPos();
+            if (spriteRenderer.flipX)// 哭率
+            {
+                Weapon.transform.localRotation = Quaternion.Euler(0, 0, 135f);
+                
+            }
+            else
+            {
+                Weapon.transform.localRotation = Quaternion.Euler(0, 0, 45f);
+                
+            }
+            Weapon.transform.localPosition = Weapon.transform.right * capCol.size.x * 0.6f;
+        }
+        else if(StateInfo.IsName("Shooting_Up"))
+        {
+            SetWeaponPos();
+            Weapon.transform.localRotation = Quaternion.Euler(0, 0, 90f);
+            if (spriteRenderer.flipX)// 哭率
+            {
+                
+                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f+ Weapon.transform.up* capCol.size.x * 0.2f;
+            }
+            else
+            {
+                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f - Weapon.transform.up * capCol.size.x * 0.2f;
+            }
+
+        }
+        else if(StateInfo.IsName("Shooting_Down"))
+        {
+            SetWeaponPos();
+            Weapon.transform.localRotation = Quaternion.Euler(0, 0, -90f);
+            if (spriteRenderer.flipX)// 哭率
+            {
+                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f - Weapon.transform.up * capCol.size.x * 0.2f;
+            }
+            else
+            {
+                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f + Weapon.transform.up * capCol.size.x * 0.2f;
+            }
+
+        }
+        else if(StateInfo.IsName("Shooting_DiagonalDown"))
+        {
+            SetWeaponPos();
+            if (spriteRenderer.flipX)// 哭率
+            {
+                Weapon.transform.localRotation = Quaternion.Euler(0, 0, -135f);
+            }
+            else
+            {
+                Weapon.transform.localRotation = Quaternion.Euler(0, 0, -45f);
+            }
+            Weapon.transform.localPosition = Weapon.transform.right * capCol.size.x * 0.6f;
+        }
+        else
+        {
+                Weapon.transform.localPosition = Vector3.zero;
+                Weapon.transform.localRotation = Quaternion.identity;
+            WeaponAnim.SetBool("Shoot", false);
+            
+        }    
+        
+    }
+
+    private void SetWeaponPos()
+    {
+
+        WeaponAnim.SetBool("Shoot", true);
+
+        Weapon.transform.localPosition = Vector3.zero;
+            Weapon.transform.localRotation = Quaternion.identity;
+        
+
+        
+    }
+
+    private void JumpShoot()
+    {
+        WeaponAnim.SetBool("Shoot", true);
+        
+        if ((Input.GetKey(keyData.RightKey)) && !isLeft)
+        {
+            isAimDir[0] = true;
+            isRight = true;
+        }
+        if (Input.GetKeyUp(keyData.RightKey) && !isLeft && isRight)
+        {
+            isAimDir[0] = false;
+            isRight = false;
+            
+        }
+
+        if (Input.GetKey(keyData.LeftKey) && !isRight)
+        {
+            isAimDir[0] = true;
+            isLeft = true;
+        }
+        if (Input.GetKeyUp(keyData.LeftKey) && !isRight && isLeft)
+        {
+            isAimDir[0] = false;
+            isLeft = false;
+            
+        }
+
+        if (Input.GetKey(keyData.UpKey) && !isDown)
+        {
+            isAimDir[1] = true;
+            isUp = true;
+
+        }
+        if (Input.GetKeyUp(keyData.UpKey) && !isDown && isUp)
+        {
+            isAimDir[1] = false;
+            isUp = false;
+           
+        }
+
+        if (Input.GetKey(keyData.DownKey) && !isUp)
+        {
+            isAimDir[2] = true;
+            isDown = true;
+            
+        }
+        if (Input.GetKeyUp(keyData.DownKey) && !isUp && isDown)
+        {
+            isAimDir[2] = false;
+            isDown = false;
+           
+        }
+
+        if (!isAimDir[0] && !isAimDir[1] && !isAimDir[2])
+        {
+            AimDir = StraightAim;
+        }
+        else
+        {
+            AimDir = 0;
+            for (int i = 0; i < isAimDir.Length; i++)
+            {
+                if (isAimDir[i])
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            AimDir += StraightAim;
+                            break;
+                        case 1:
+                            AimDir += UpAim;
+                            break;
+                        case 2:
+                            AimDir += DownAim;
+                            break;
+                    }
+                }
+
+            }
+        }
+
+        Weapon.transform.localPosition = Vector3.zero;
+        Weapon.transform.localRotation = Quaternion.identity;
+        switch(AimDir)
+        {
+            
+            case 1:
+                if (spriteRenderer.flipX)// 哭率
+                {
+                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 180f);
+                }
+                break;
+            case 2:
+                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+                break;
+            case 3:
+                if (spriteRenderer.flipX)// 哭率
+                {
+                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 135f);
+                }
+                else
+                {
+                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 45f);
+                }
+                break;
+            case 4:
+                
+                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, -90f);
+                
+                break;
+            case 5:
+                if (spriteRenderer.flipX)// 哭率
+                {
+                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, -135f);
+                }
+                else
+                {
+                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, -45f);
+                }
+                break;
+        }
+        Weapon.transform.localPosition = Weapon.transform.right * capCol.size.x * 0.6f;
+
+    }
+
+    private void Reset()
+    {
+        Array.Clear(isAimDir, 0, isAimDir.Length);
+        isRight = false;
+        isLeft = false;
+        isUp = false;
+        isDown = false;
+        AimDir = 0;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log(collision.contacts[0].normal.y);
@@ -509,6 +824,15 @@ public class PlayerControl : Unit
             isJump = false;
             Anim.SetBool(Anim_bJump, isJump);
             isDashGround = true;
+            isCountParry = false;
+            
+
+            Weapon.transform.localPosition = Vector3.zero;
+            Weapon.transform.localRotation = Quaternion.identity;
+            WeaponAnim.SetBool("Shoot", false);
+               
+            
+           
         }
 
         if(collision.gameObject.layer.Equals(LayerMask.NameToLayer("ClearPlatform")))
@@ -532,6 +856,38 @@ public class PlayerControl : Unit
         if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("ClearPlatform")))
         {
             isClearPlatform = false;
+        }
+       
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Parry")) && isParry)
+        {
+            if(collision.gameObject.GetComponent<CircleCollider2D>().isTrigger)
+            {
+                collision.gameObject.GetComponent<ParrySphere>().isParry = false;
+                Rigid.velocity = Vector2.zero;
+                Rigid.AddForce(new Vector2(0, Jump_Force * 0.8f), ForceMode2D.Impulse);
+                if (parryCorutine != null)
+                {
+                    isZeroDuration = false;
+                    isParry = false;
+                    isCountParry = false;
+                    StopCoroutine(Parry_co());
+                    parryCorutine = null;
+                    Anim.SetBool(Anim_bParry, isParry);
+                }
+            }
+
+           
+        }
+        if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Interaction")))
+        {
+            if(Input.GetKeyDown(keyData.ShootKey))
+            {
+                Scene_Manager.Instance.SetScene(eScene.Menu);
+            }
         }
     }
 }
