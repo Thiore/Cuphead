@@ -36,11 +36,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Dust2Tex:
-        m_Texture: {fileID: 2800000, guid: 19d909f3c8abbcc45b8ab1fc013643b3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2207118a75b0d9b4caaacb84e3816792, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DustTex:
-        m_Texture: {fileID: 2800000, guid: fc79ed5ec100ebd4bb579b03f31e258f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4f3317a091e77c74cbc5d3bd413b7ac1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: 86ddbf80b9901da4980a33d5f79a21fb, type: 2}
+        m_Texture: {fileID: 8400000, guid: 2d587fe92a3009d4487e7f62d8111e2a, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

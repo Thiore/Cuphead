@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-enum settings
+public enum settings
 {
     Audio = 0,
     Control,
@@ -13,49 +13,70 @@ enum settings
 
 public class Settings : MonoBehaviour
 {
-    [SerializeField] private Button Audio;
-    [SerializeField] private Button Control;
-    [SerializeField] private Button Back;
+    [SerializeField] private Text Audio_text;
+    [SerializeField] private Text Control_text;
+    [SerializeField] private Text Back_text;
+    [SerializeField] private Key_Data Key;
 
-    private Color DefaultColor = new Color(100, 100, 100);
-    private Color SelectColor = new Color(195, 35, 35);
+    private Color DefaultColor = new Color(0.27f, 0.27f, 0.27f);
+    private Color SelectColor = Color.red;
 
-    private Text Audio_text;
-    private Text Control_text;
-    private Text Back_text;
+    
 
     settings set;
 
     private void OnEnable()
     {
-        Audio_text = Audio.GetComponentInChildren<Text>();
-        Control_text = Control.GetComponentInChildren<Text>();
-        Back_text = Back.GetComponentInChildren<Text>();
+        set = settings.Audio;
 
-        switch (set)
+
+        Audio_text.color = SelectColor;
+        Control_text.color = DefaultColor;
+        Back_text.color = DefaultColor;
+              
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(Key.UpKey))
         {
-            case settings.Audio:
-                Audio_text.color = SelectColor;
-                Control_text.color = DefaultColor;
-                Back_text.color = DefaultColor;
-                break;
-            case settings.Control:
-                Audio_text.color = DefaultColor;
-                Control_text.color = SelectColor;
-                Back_text.color = DefaultColor;
-                break;
-            case settings.Back:
-                Audio_text.color = DefaultColor;
-                Control_text.color = DefaultColor;
-                Back_text.color = SelectColor;
-                break;
+
+            if (set.Equals(settings.Audio))
+                set = settings.Back;
+            else
+                set -= 1;
+
+            SetControlMode(set);
+        }
+        if (Input.GetKeyDown(Key.DownKey))
+        {
+            if (set.Equals(settings.Back))
+                set = settings.Audio;
+            else
+                set += 1;
+
+            SetControlMode(set);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(Key.ShootKey))
+        {
+            switch (set)
+            {
+                case settings.Audio:
+
+                    break;
+                case settings.Control:
+
+                    break;
+                case settings.Back:
+                    gameObject.SetActive(false);
+                    break;
+            }
         }
     }
-
-    public void SetControlMode(int controlType)
+    public void SetControlMode(settings controlType)
     {
-        set = (settings)controlType;
-        switch (set)
+        
+        switch (controlType)
         {
             case settings.Audio:
                 Audio_text.color = SelectColor;

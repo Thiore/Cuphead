@@ -1,0 +1,1356 @@
+fileFormatVersion: 2
+guid: 64025eca4a3b4974a8653144d4ec534d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4880318350045379523
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_0
+  - first:
+      213: 6761612811495677541
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_1
+  - first:
+      213: -8840365132677567078
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_2
+  - first:
+      213: -2579366165373542949
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_3
+  - first:
+      213: 7596631064559955147
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_4
+  - first:
+      213: 1115118515371002479
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_5
+  - first:
+      213: 9163052137584971950
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_6
+  - first:
+      213: -6458202365803911681
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_7
+  - first:
+      213: -4807342031184655587
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_8
+  - first:
+      213: -3514593697334266227
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_9
+  - first:
+      213: 8679628112265578858
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_10
+  - first:
+      213: -26919572893591640
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_11
+  - first:
+      213: -7254783726264746302
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_12
+  - first:
+      213: -975573527688838212
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_13
+  - first:
+      213: -377609817540241456
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_14
+  - first:
+      213: -5698174946564135176
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_15
+  - first:
+      213: 5119177440576351591
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_16
+  - first:
+      213: 7461533039588544254
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_17
+  - first:
+      213: -1501528654024859659
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_18
+  - first:
+      213: -7180217348169535858
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_19
+  - first:
+      213: -2073600860185570714
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_20
+  - first:
+      213: -1965520481400404943
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_21
+  - first:
+      213: -3541532556306885646
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_22
+  - first:
+      213: 8412015960313292645
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_23
+  - first:
+      213: -8880881234860466171
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_24
+  - first:
+      213: -5899700971814944003
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_25
+  - first:
+      213: -3610771907212796063
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_26
+  - first:
+      213: 2992226587755842821
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_27
+  - first:
+      213: 2969991228708292496
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_28
+  - first:
+      213: 9088857393315864054
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_29
+  - first:
+      213: -823230958789013764
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_30
+  - first:
+      213: 8875553182682722223
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_31
+  - first:
+      213: -8934433899970074734
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_43
+  - first:
+      213: -8873023437451684464
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_44
+  - first:
+      213: -658490288711247993
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_45
+  - first:
+      213: -7950924719700409069
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_46
+  - first:
+      213: 1550191372398194806
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_47
+  - first:
+      213: 6647303395893582732
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_48
+  - first:
+      213: -4968192058693341478
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_49
+  - first:
+      213: 1096083976057307929
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_50
+  - first:
+      213: 33278621974490317
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_51
+  - first:
+      213: -640611828362491350
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_52
+  - first:
+      213: -2877948973568571871
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_64
+  - first:
+      213: -5293601018110829473
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_65
+  - first:
+      213: -6106112642724748475
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_66
+  - first:
+      213: -2008484637395356783
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_67
+  - first:
+      213: -6443127704747458324
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_91
+  - first:
+      213: -8590592961916565240
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_92
+  - first:
+      213: 4614496948192091584
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_93
+  - first:
+      213: -4196982755340625868
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_94
+  - first:
+      213: -2942489027882220003
+    second: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_95
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 699
+        width: 153
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb764daeaf5ab340800000000000000
+      internalID: 4880318350045379523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 699
+        width: 153
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e1ee9070316dd50800000000000000
+      internalID: 6761612811495677541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 699
+        width: 142
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d210600c6b05580800000000000000
+      internalID: -8840365132677567078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_3
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 700
+        width: 141
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd9f3f7320443cd0800000000000000
+      internalID: -2579366165373542949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_4
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 700
+        width: 138
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc2bcc54b7ac6960800000000000000
+      internalID: 7596631064559955147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_5
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 700
+        width: 139
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a462fa162b97f00800000000000000
+      internalID: 1115118515371002479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_6
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 700
+        width: 144
+        height: 170
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0d2270f53b92f70800000000000000
+      internalID: 9163052137584971950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_7
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 699
+        width: 157
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5aba25a2bdf56a0800000000000000
+      internalID: -6458202365803911681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_8
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 699
+        width: 152
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b0f6d94e3e84db0800000000000000
+      internalID: -4807342031184655587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_9
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 699
+        width: 153
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86709447a7a93fc0800000000000000
+      internalID: -3514593697334266227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_10
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 699
+        width: 152
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69851e08cb347870800000000000000
+      internalID: 8679628112265578858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_11
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 699
+        width: 151
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a71c248acc50aff0800000000000000
+      internalID: -26919572893591640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_12
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 699
+        width: 142
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce74b173a4d15b90800000000000000
+      internalID: -7254783726264746302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_13
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 700
+        width: 141
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb305dd9b011672f0800000000000000
+      internalID: -975573527688838212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_14
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 700
+        width: 139
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d750d12fd572caf0800000000000000
+      internalID: -377609817540241456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_15
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 700
+        width: 141
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6a30a83140ce0b0800000000000000
+      internalID: -5698174946564135176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 478
+        width: 151
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d2fb772c8fa0740800000000000000
+      internalID: 5119177440576351591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_17
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 478
+        width: 152
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe048044c0bc8760800000000000000
+      internalID: 7461533039588544254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_18
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 479
+        width: 154
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff17c405af792be0800000000000000
+      internalID: -1501528654024859659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_19
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 478
+        width: 154
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ee1404d5eba5c90800000000000000
+      internalID: -7180217348169535858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_20
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 478
+        width: 155
+        height: 157
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662d1ba01071933e0800000000000000
+      internalID: -2073600860185570714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_21
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 478
+        width: 154
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134cf53398119b4e0800000000000000
+      internalID: -1965520481400404943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_22
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 478
+        width: 151
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3d8d467e2f9dec0800000000000000
+      internalID: -3541532556306885646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_23
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 481
+        width: 145
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567e36772fb7db470800000000000000
+      internalID: 8412015960313292645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_24
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 480
+        width: 139
+        height: 176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500a5bfd195c0c480800000000000000
+      internalID: -8880881234860466171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_25
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 481
+        width: 140
+        height: 174
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df281fd593d002ea0800000000000000
+      internalID: -5899700971814944003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_26
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 481
+        width: 140
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f1f91c416f3edc0800000000000000
+      internalID: -3610771907212796063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_27
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 481
+        width: 143
+        height: 169
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d8aa26a36868920800000000000000
+      internalID: 2992226587755842821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_28
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 478
+        width: 151
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0970f2d6947873920800000000000000
+      internalID: 2969991228708292496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_29
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 478
+        width: 174
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd56c6f4ab122e70800000000000000
+      internalID: 9088857393315864054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_30
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 478
+        width: 181
+        height: 158
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfec64dfdcb4394f0800000000000000
+      internalID: -823230958789013764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_31
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 478
+        width: 136
+        height: 219
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf24ee489c4c2b70800000000000000
+      internalID: 8875553182682722223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_43
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 166
+        width: 177
+        height: 295
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297631364b3820480800000000000000
+      internalID: -8934433899970074734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_44
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 166
+        width: 168
+        height: 307
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0951af6e130bcd480800000000000000
+      internalID: -8873023437451684464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_45
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 166
+        width: 150
+        height: 309
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787525d32929cd6f0800000000000000
+      internalID: -658490288711247993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_46
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 166
+        width: 161
+        height: 307
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315826ed714a8a190800000000000000
+      internalID: -7950924719700409069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_47
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 166
+        width: 154
+        height: 308
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6707ba507d2638510800000000000000
+      internalID: 1550191372398194806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_48
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 166
+        width: 150
+        height: 306
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b1c7a3837ff3c50800000000000000
+      internalID: 6647303395893582732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_49
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 166
+        width: 151
+        height: 300
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adeaaad25af6d0bb0800000000000000
+      internalID: -4968192058693341478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_50
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 166
+        width: 154
+        height: 300
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913c4e4a192163f00800000000000000
+      internalID: 1096083976057307929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_51
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 166
+        width: 158
+        height: 298
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc6769faba367000800000000000000
+      internalID: 33278621974490317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_52
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 166
+        width: 161
+        height: 297
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a4a8bafe61c17f0800000000000000
+      internalID: -640611828362491350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_64
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 166
+        width: 164
+        height: 285
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126ceb418a87f08d0800000000000000
+      internalID: -2877948973568571871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_65
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 166
+        width: 169
+        height: 270
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c9bd4bbe95986b0800000000000000
+      internalID: -5293601018110829473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_66
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 166
+        width: 181
+        height: 226
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543aedb27eab24ba0800000000000000
+      internalID: -6106112642724748475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_67
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 166
+        width: 174
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193783b1ddd6024e0800000000000000
+      internalID: -2008484637395356783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_91
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 197
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0cc0c5d796596a0800000000000000
+      internalID: -6443127704747458324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_92
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 3
+        width: 197
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8090efe473518c880800000000000000
+      internalID: -8590592961916565240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_93
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 2
+        width: 202
+        height: 155
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd1d16968cf90040800000000000000
+      internalID: 4614496948192091584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_94
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 3
+        width: 201
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4385b7bab6251c5c0800000000000000
+      internalID: -4196982755340625868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Cuphead Dont Deal With the Devil - Loading Hourglass_95
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2
+        width: 200
+        height: 152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d168891b1dd2a27d0800000000000000
+      internalID: -2942489027882220003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

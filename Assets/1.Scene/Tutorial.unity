@@ -620,7 +620,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.88, y: 3.21}
+    oldSize: {x: 2.8839843, y: 3.2099998}
     newSize: {x: 2.88, y: 3.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1402,10 +1402,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 368882770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fadaae3751e1114e899b41e3f85cda7, type: 3}
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKey: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
   CheckKey: 4
 --- !u!1 &370496128
 GameObject:
@@ -1608,10 +1608,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 387504580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fadaae3751e1114e899b41e3f85cda7, type: 3}
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKey: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
   CheckKey: 7
 --- !u!114 &387504583
 MonoBehaviour:
@@ -2281,10 +2281,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 512291431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fadaae3751e1114e899b41e3f85cda7, type: 3}
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKey: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
   CheckKey: 4
 --- !u!114 &512291434
 MonoBehaviour:
@@ -2454,10 +2454,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 534454056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fadaae3751e1114e899b41e3f85cda7, type: 3}
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKey: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
   CheckKey: 5
 --- !u!114 &534454059
 MonoBehaviour:
@@ -2512,6 +2512,7 @@ GameObject:
   - component: {fileID: 542451053}
   - component: {fileID: 542451055}
   - component: {fileID: 542451054}
+  - component: {fileID: 542451056}
   m_Layer: 25
   m_Name: DashKey
   m_TagString: Untagged
@@ -2580,6 +2581,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542451052}
   m_CullTransparentMesh: 1
+--- !u!114 &542451056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542451052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  CheckKey: 9
 --- !u!1 &563265425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,10 +3612,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 672670697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fadaae3751e1114e899b41e3f85cda7, type: 3}
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKey: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
   CheckKey: 6
 --- !u!114 &672670700
 MonoBehaviour:
@@ -4444,7 +4459,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 2.73}
+    oldSize: {x: 3.2058716, y: 2.73}
     newSize: {x: 3.2, y: 2.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4715,10 +4730,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1006770212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fadaae3751e1114e899b41e3f85cda7, type: 3}
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKey: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
   CheckKey: 4
 --- !u!114 &1006770215
 MonoBehaviour:
@@ -5346,10 +5361,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070941937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fadaae3751e1114e899b41e3f85cda7, type: 3}
+  m_Script: {fileID: 11500000, guid: f9471e84b73d6b24f80fd51c2dcae8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerKey: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
+  key: {fileID: 11400000, guid: 2339d476b3b9cc04f8a539e483cb5157, type: 2}
   CheckKey: 6
 --- !u!114 &1070941940
 MonoBehaviour:
@@ -5428,7 +5443,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.24, y: 3.93}
+    oldSize: {x: 2.2413282, y: 3.9300003}
     newSize: {x: 2.24, y: 3.93}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

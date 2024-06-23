@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SingleTon<T> : MonoBehaviour where T : MonoBehaviour
 {
-    protected static T instance;
-    public static bool HasInstance => instance != null;
-    public static T TryGetInstance() => HasInstance ? instance : null;
-    public static T Current => instance;
+    protected static T instance = null;
+    
 
     public static T Instance
     {
@@ -15,14 +13,19 @@ public class SingleTon<T> : MonoBehaviour where T : MonoBehaviour
         {
             if(instance == null)
             {
-                instance = FindObjectOfType<T>();
-                if(instance == null)
+                var obj = FindObjectOfType<T>();
+                if(obj != null)
                 {
-                    var obj = new GameObject();
-                    obj.name = typeof(T).Name + "_AutoCreated";
-                    instance = obj.AddComponent<T>();
+                    instance = obj;
                 }
+                else
+                {
+                    var newObj = new GameObject().AddComponent<T>();
+                    newObj.name = typeof(T).ToString() + "_Singleton";
+                    instance = newObj;
 
+                    DontDestroyOnLoad(newObj);  
+                }
             }
             return instance;
         }
@@ -37,6 +40,14 @@ public class SingleTon<T> : MonoBehaviour where T : MonoBehaviour
         if (!Application.isPlaying)
             return;
 
-        instance = this as T;
+        if (instance == null)
+        {
+            instance = this as T;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

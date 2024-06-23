@@ -1,23 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public enum Scene
-{
-    TitleScene = 0,
-    Menu,
-    Intro,
-    Tutorial,
-    Inkwell,
-    ForestFollies
-}
 public class NextScene : MonoBehaviour
 {
-    public void SetScene(Scene nextScene)
+    [SerializeField] private eScene nextScene;
+    [SerializeField] private Key_Data Key;
+    [SerializeField] private Key keyCode;
+
+    private void Update()
     {
-        SceneManager.LoadScene(nextScene.ToString());
+       
+        if (Input.GetKeyDown(Key.GetKey(keyCode)))
+        {
+            Scene_Manager.Instance.SetScene(nextScene);
+        }
+        
+       
     }
-
-
 }

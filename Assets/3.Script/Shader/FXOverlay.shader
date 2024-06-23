@@ -55,7 +55,7 @@ Shader "Unlit/FXOverlay"
 
                 if (dust2Color.a < 0.9)
                 {
-                    baseColor.rgb = (1 / dust2Color.a) * 0.8;
+                    baseColor.argb = (1 / dust2Color.a) * 0.8;
                 }
 
                 baseColor.rgb *= dustColor.rgb;
