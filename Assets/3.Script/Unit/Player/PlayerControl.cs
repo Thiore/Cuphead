@@ -10,7 +10,6 @@ public class PlayerControl : Unit
     [SerializeField] private GameObject WallCollider;
     [SerializeField] private GameObject Weapon;
     private GameObject ClearPlatformObject;
-    private Animator WeaponAnim;
     private PlayerWeapon playerWeapon;
     //private Vector2 LastVelocity;
 
@@ -76,7 +75,7 @@ public class PlayerControl : Unit
         Anim = GetComponent<Animator>();
         Rigid = GetComponent<Rigidbody2D>();
         playerCol = GetComponent<BoxCollider2D>();
-        WeaponAnim = Weapon.GetComponent<Animator>();
+        
         playerWeapon = Weapon.GetComponent<PlayerWeapon>();
         isCurrentDir = isLastDir;
         
@@ -112,8 +111,8 @@ public class PlayerControl : Unit
 
         if (Input.GetKeyDown(keyData.ShootKey)&&!isDash)
         {
-            
-            //playerWeapon.StartAttack_co();
+
+            playerWeapon.Shoot = true;
 
             isAttack = true;
             Anim.SetBool(Anim_bAttack, isAttack);
@@ -121,7 +120,7 @@ public class PlayerControl : Unit
         
         if (Input.GetKeyUp(keyData.ShootKey))
         {
-            //playerWeapon.StopAttack_co();
+            playerWeapon.Shoot = false;
             isAttack = false;
             Anim.SetBool(Anim_bAttack, isAttack);
         }
@@ -162,7 +161,7 @@ public class PlayerControl : Unit
         }
         else
         {
-                WeaponAnim.SetBool("Shoot", false);
+            playerWeapon.Shoot = false;
                 Weapon.transform.localPosition = Vector3.zero;
                 Weapon.transform.localRotation = Quaternion.identity;
                // playerWeapon.StopAttack_co();
@@ -662,7 +661,7 @@ public class PlayerControl : Unit
         {
                 Weapon.transform.localPosition = Vector3.zero;
                 Weapon.transform.localRotation = Quaternion.identity;
-            WeaponAnim.SetBool("Shoot", false);
+            playerWeapon.Shoot = false;
             
         }    
         
@@ -671,7 +670,7 @@ public class PlayerControl : Unit
     private void SetWeaponPos()
     {
 
-        WeaponAnim.SetBool("Shoot", true);
+        playerWeapon.Shoot = true;
 
         Weapon.transform.localPosition = Vector3.zero;
             Weapon.transform.localRotation = Quaternion.identity;
@@ -682,7 +681,7 @@ public class PlayerControl : Unit
 
     private void JumpShoot()
     {
-        WeaponAnim.SetBool("Shoot", true);
+        playerWeapon.Shoot = true;
         
         if ((Input.GetKey(keyData.RightKey)) && !isLeft)
         {
@@ -829,7 +828,7 @@ public class PlayerControl : Unit
 
             Weapon.transform.localPosition = Vector3.zero;
             Weapon.transform.localRotation = Quaternion.identity;
-            WeaponAnim.SetBool("Shoot", false);
+            playerWeapon.Shoot = false;
                
             
            
