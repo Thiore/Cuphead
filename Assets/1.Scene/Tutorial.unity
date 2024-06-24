@@ -986,7 +986,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338456654}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1052,15 +1052,15 @@ SpriteRenderer:
   m_SortingLayerID: -1509962287
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1152628508112146077, guid: d4fd5462945a16145b29ec415044760b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.6, y: 0.69}
+  m_Size: {x: 0.58, y: 0.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &338456658
@@ -1076,6 +1076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefabs: {fileID: 179043059953404912, guid: ff774e5bdf1bfe54b94e1d96ea6de83a, type: 3}
+  PlayerCol: {fileID: 1461031831}
 --- !u!1 &341012618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,13 +3173,15 @@ GameObject:
   - component: {fileID: 598945004}
   - component: {fileID: 598945003}
   - component: {fileID: 598945002}
+  - component: {fileID: 598945005}
+  - component: {fileID: 598945006}
   m_Layer: 10
   m_Name: tutorial_target_0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &598945002
 Animator:
   serializedVersion: 3
@@ -3264,6 +3267,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &598945005
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598945001}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00258255, y: -0.002583146}
+  serializedVersion: 2
+  m_Radius: 0.39366806
+--- !u!114 &598945006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598945001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe8e3fba6d646745bc15783e68c224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &599688266
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,8 +4467,8 @@ Transform:
   m_Father: {fileID: 598945004}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &779087065
-BoxCollider2D:
+--- !u!60 &779087065
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4449,7 +4480,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.120856434, y: 0.002325058}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4459,9 +4490,38 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7824826, y: 1.2835426}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.85999995, y: -0.65}
+      - {x: 1.05, y: -0.58}
+      - {x: 1.0799999, y: -0.53999996}
+      - {x: 1.0799999, y: -0.48999998}
+      - {x: 1.02, y: -0.39999998}
+      - {x: 0.7, y: -0.049999997}
+      - {x: 0.56, y: 0.12}
+      - {x: 0.22, y: 0.45999998}
+      - {x: 0.06, y: 0.63}
+      - {x: 0.06, y: 0.82}
+      - {x: 0.03, y: 0.84999996}
+      - {x: -0.03, y: 0.85999995}
+      - {x: -0.08, y: 0.84999996}
+      - {x: -0.099999994, y: 0.84}
+      - {x: -0.12, y: 0.65999997}
+      - {x: -0.24, y: 0.55}
+      - {x: -0.39, y: 0.39999998}
+      - {x: -0.97999996, y: -0.22999999}
+      - {x: -1.11, y: -0.34}
+      - {x: -1.13, y: -0.41}
+      - {x: -1.13, y: -0.48}
+      - {x: -1.06, y: -0.55}
+      - {x: -0.85999995, y: -0.65}
+      - {x: -0.7, y: -0.71}
+      - {x: -0.32, y: -0.84999996}
+      - {x: -0.19999999, y: -0.89}
+      - {x: -0.049999997, y: -0.89}
+      - {x: 0.07, y: -0.85999995}
+      - {x: 0.26999998, y: -0.78999996}
+      - {x: 0.59999996, y: -0.74}
 --- !u!1 &783198636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,7 +5163,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 15432
+    m_Bits: 8404040
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 86ddbf80b9901da4980a33d5f79a21fb, type: 2}
   m_TargetDisplay: 0
@@ -5671,7 +5731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121417369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.22, y: -2.69, z: 0}
+  m_LocalPosition: {x: -4.24, y: -2.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1461031833}
@@ -5701,6 +5761,8 @@ MonoBehaviour:
   DashSpeed: 10
   WallCollider: {fileID: 1461031831}
   Weapon: {fileID: 338456654}
+  dustPrefabs_1: {fileID: 4531502280520720627, guid: 408c8b19e024f0a49bdce4f1e0473533, type: 3}
+  dustPrefabs_2: {fileID: 6634027804061950606, guid: 3b6e1a23d57da9b4dbbef73f6a01d32a, type: 3}
 --- !u!114 &1121417376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6643,7 +6705,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1461031833}
-  - component: {fileID: 1461031832}
   - component: {fileID: 1461031834}
   m_Layer: 3
   m_Name: WallCollider
@@ -6652,32 +6713,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1461031832
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461031831}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!4 &1461031833
 Transform:
   m_ObjectHideFlags: 0

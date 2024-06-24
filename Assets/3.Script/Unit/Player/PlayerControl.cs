@@ -9,8 +9,15 @@ public class PlayerControl : Unit
     [SerializeField] private float DashSpeed;
     [SerializeField] private GameObject WallCollider;
     [SerializeField] private GameObject Weapon;
+    [SerializeField] private GameObject dustPrefabs_1;
+    [SerializeField] private GameObject dustPrefabs_2;
+
+
+
+    private GameObject[] DustPrefabs = new GameObject[4];
     private GameObject ClearPlatformObject;
     private PlayerWeapon playerWeapon;
+    private SpriteRenderer weaponSprite;
     //private Vector2 LastVelocity;
 
     
@@ -27,6 +34,8 @@ public class PlayerControl : Unit
     private bool isRunDiagonal = false;
     private bool isParry = false;
     private bool isCountParry = false;
+
+    
    
     private bool isDuck = false;
     private bool isAttack = false;
@@ -75,9 +84,18 @@ public class PlayerControl : Unit
         Anim = GetComponent<Animator>();
         Rigid = GetComponent<Rigidbody2D>();
         playerCol = GetComponent<BoxCollider2D>();
-        
+        weaponSprite = Weapon.GetComponent<SpriteRenderer>();
         playerWeapon = Weapon.GetComponent<PlayerWeapon>();
         isCurrentDir = isLastDir;
+
+
+        DustPrefabs[0] = Instantiate(dustPrefabs_1, transform.position, Quaternion.identity);
+        
+        DustPrefabs[1] = Instantiate(dustPrefabs_2, transform.position, Quaternion.identity);
+        
+        DustPrefabs[2] = Instantiate(dustPrefabs_1, transform.position, Quaternion.identity);
+        
+        DustPrefabs[3] = Instantiate(dustPrefabs_2, transform.position, Quaternion.identity);
         
     }
 
@@ -89,7 +107,7 @@ public class PlayerControl : Unit
 
     private void Update()
     {
-        
+        weaponSprite.flipX = spriteRenderer.flipX;
         //MyPosition = transform.position;
         StateInfo = Anim.GetCurrentAnimatorStateInfo(0);
 
@@ -162,8 +180,8 @@ public class PlayerControl : Unit
         else
         {
             playerWeapon.Shoot = false;
-                Weapon.transform.localPosition = Vector3.zero;
-                Weapon.transform.localRotation = Quaternion.identity;
+            Weapon.transform.position = capCol.transform.position;
+                Weapon.transform.rotation = Quaternion.identity;
                // playerWeapon.StopAttack_co();
             
                 
@@ -595,73 +613,77 @@ public class PlayerControl : Unit
             SetWeaponPos();
             if (spriteRenderer.flipX)// 哭率
             {
-                Weapon.transform.localRotation = Quaternion.Euler(0, 0, 180f);
-                
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.6f;
             }
-            Weapon.transform.localPosition = Weapon.transform.right*capCol.size.x * 0.6f;
+            else
+                Weapon.transform.position = capCol.transform.position + Vector3.right*capCol.size.x * 0.6f;
         }
         else if(StateInfo.IsName("RunShooting_DiagonalUp")||StateInfo.IsName("Shooting_DiagonalUp"))
         {
             SetWeaponPos();
             if (spriteRenderer.flipX)// 哭率
             {
-                Weapon.transform.localRotation = Quaternion.Euler(0, 0, 135f);
-                
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.4f + Vector3.up * capCol.size.y*0.4f;
+                Weapon.transform.rotation = Quaternion.Euler(0, 0, -40f);
             }
             else
             {
-                Weapon.transform.localRotation = Quaternion.Euler(0, 0, 45f);
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.4f + Vector3.up * capCol.size.y * 0.4f;
+                Weapon.transform.rotation = Quaternion.Euler(0, 0, 40f);
                 
             }
-            Weapon.transform.localPosition = Weapon.transform.right * capCol.size.x * 0.6f;
+            
         }
         else if(StateInfo.IsName("Shooting_Up"))
         {
             SetWeaponPos();
-            Weapon.transform.localRotation = Quaternion.Euler(0, 0, 90f);
+           
             if (spriteRenderer.flipX)// 哭率
             {
                 
-                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f+ Weapon.transform.up* capCol.size.x * 0.2f;
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.2f+ Vector3.up * capCol.size.y * 0.6f;
             }
             else
             {
-                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f - Weapon.transform.up * capCol.size.x * 0.2f;
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.2f + Vector3.up * capCol.size.y * 0.6f;
             }
-
+            Weapon.transform.rotation = Quaternion.Euler(0, 0, 90f);
         }
         else if(StateInfo.IsName("Shooting_Down"))
         {
             SetWeaponPos();
-            Weapon.transform.localRotation = Quaternion.Euler(0, 0, -90f);
+            
             if (spriteRenderer.flipX)// 哭率
             {
-                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f - Weapon.transform.up * capCol.size.x * 0.2f;
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.2f + Vector3.down * capCol.size.y * 0.6f;
             }
             else
             {
-                Weapon.transform.localPosition = Weapon.transform.right * capCol.size.y * 0.5f + Weapon.transform.up * capCol.size.x * 0.2f;
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.2f + Vector3.down * capCol.size.y * 0.6f;
             }
-
+            Weapon.transform.rotation = Quaternion.Euler(0, 0, -90f);
         }
         else if(StateInfo.IsName("Shooting_DiagonalDown"))
         {
             SetWeaponPos();
             if (spriteRenderer.flipX)// 哭率
             {
-                Weapon.transform.localRotation = Quaternion.Euler(0, 0, -135f);
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.4f + Vector3.down * capCol.size.y * 0.4f;
+                Weapon.transform.rotation = Quaternion.Euler(0, 0, 40f);
             }
             else
             {
-                Weapon.transform.localRotation = Quaternion.Euler(0, 0, -45f);
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.4f + Vector3.down * capCol.size.y * 0.4f;
+                Weapon.transform.rotation = Quaternion.Euler(0, 0, -40f);
+
             }
-            Weapon.transform.localPosition = Weapon.transform.right * capCol.size.x * 0.6f;
         }
         else
         {
-                Weapon.transform.localPosition = Vector3.zero;
-                Weapon.transform.localRotation = Quaternion.identity;
-            playerWeapon.Shoot = false;
+            Weapon.transform.rotation = Quaternion.identity;
+            Weapon.transform.position = capCol.transform.position;
+                
+                playerWeapon.Shoot = false;
             
         }    
         
@@ -671,9 +693,9 @@ public class PlayerControl : Unit
     {
 
         playerWeapon.Shoot = true;
-
-        Weapon.transform.localPosition = Vector3.zero;
-            Weapon.transform.localRotation = Quaternion.identity;
+        Weapon.transform.rotation = Quaternion.identity;
+        Weapon.transform.position = capCol.transform.position;
+       
         
 
         
@@ -761,47 +783,54 @@ public class PlayerControl : Unit
             }
         }
 
-        Weapon.transform.localPosition = Vector3.zero;
-        Weapon.transform.localRotation = Quaternion.identity;
+        Weapon.transform.position = capCol.transform.position;
+        Weapon.transform.rotation = Quaternion.identity;
         switch(AimDir)
         {
             
             case 1:
                 if (spriteRenderer.flipX)// 哭率
                 {
-                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 180f);
+                    Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.6f;
+                    Weapon.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
                 }
+                else
+                    Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.6f;
                 break;
             case 2:
-                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+                Weapon.transform.position = capCol.transform.position + Vector3.up * capCol.size.x * 0.6f;
+                Weapon.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
                 break;
             case 3:
                 if (spriteRenderer.flipX)// 哭率
                 {
-                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 135f);
+                    Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.4f+ Vector3.up *capCol.size.y*0.4f;
+                    Weapon.transform.rotation = Quaternion.Euler(0f, 0f, -45f);
                 }
                 else
                 {
-                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, 45f);
+                    Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.4f + Vector3.up * capCol.size.y * 0.4f;
+                    Weapon.transform.rotation = Quaternion.Euler(0f, 0f, 45f);
                 }
                 break;
             case 4:
-                
-                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, -90f);
-                
+                Weapon.transform.position = capCol.transform.position + Vector3.down * capCol.size.x * 0.6f;
+                Weapon.transform.rotation = Quaternion.Euler(0f, 0f, -90f);
                 break;
             case 5:
                 if (spriteRenderer.flipX)// 哭率
                 {
-                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, -135f);
+                    Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.4f + Vector3.down * capCol.size.y * 0.4f;
+                    Weapon.transform.rotation = Quaternion.Euler(0f, 0f, 45f);
                 }
                 else
                 {
-                    Weapon.transform.localRotation = Quaternion.Euler(0f, 0f, -45f);
+                    Weapon.transform.position = capCol.transform.position+Vector3.right * capCol.size.x * 0.4f + Vector3.down * capCol.size.y * 0.4f;
+                    Weapon.transform.rotation = Quaternion.Euler(0f, 0f, -45f);
                 }
                 break;
         }
-        Weapon.transform.localPosition = Weapon.transform.right * capCol.size.x * 0.6f;
+        
 
     }
 
@@ -824,12 +853,29 @@ public class PlayerControl : Unit
             Anim.SetBool(Anim_bJump, isJump);
             isDashGround = true;
             isCountParry = false;
-            
 
-            Weapon.transform.localPosition = Vector3.zero;
+
             Weapon.transform.localRotation = Quaternion.identity;
+            Weapon.transform.position = capCol.transform.position;
             playerWeapon.Shoot = false;
-               
+
+            if(DustPrefabs[0].activeSelf)
+            {
+                DustPrefabs[2].SetActive(true);
+                DustPrefabs[2].transform.position = transform.position;
+                DustPrefabs[3].SetActive(true);
+                DustPrefabs[3].transform.position = transform.position;
+                Debug.Log("2,3");
+            }
+            else
+            {
+                DustPrefabs[0].SetActive(true);
+                DustPrefabs[0].transform.position = transform.position;
+                DustPrefabs[1].SetActive(true);
+                DustPrefabs[1].transform.position = transform.position;
+                Debug.Log("1,2");
+            }
+            
             
            
         }

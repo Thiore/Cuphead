@@ -13,19 +13,23 @@ public class PlayerBullet : MonoBehaviour
     
     
     private bool Hit = false;
+    Vector3 Dir;
 
     private void Awake()
     {
         //cirCol = GetComponent<CircleCollider2D>();
         Anim = GetComponent<Animator>();
         move = GetComponent<Movement2D>();
-
+        
 
 
     }
     private void Update()
     {
-        move.MoveTo(transform.right, 24f);
+        if(!Hit)
+            move.MoveTo(Dir, 12f);
+        Debug.Log(Dir);
+
         if (Hit)
         {
             AnimatorStateInfo info = Anim.GetCurrentAnimatorStateInfo(0);
@@ -39,6 +43,19 @@ public class PlayerBullet : MonoBehaviour
         }
     }
 
+    public void SetDir(Vector3 dir)
+    {
+        this.Dir = dir;
+        float angle = Mathf.Atan2(Dir.y, Dir.x) * Mathf.Rad2Deg;
+        
+        transform.localRotation = Quaternion.identity;
+        
+        transform.localRotation = Quaternion.Euler(0, 0, angle);
+       
+
+
+    }
+
     public void Initialize(PlayerWeapon weapon)
     {
         this.weapon = weapon;
@@ -46,13 +63,24 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Hit = true;
-        Anim.SetTrigger("Hit");
+        //Debug.Log("왜 안맞음?");
 
-        //if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Enemy")))
-        //{
+        if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Enemy")))
+        {
+            Hit = true;
+            Anim.SetTrigger("Hit");
+            collision.gameObject.GetComponent<Target>().StartHit();
 
-        //}
+        }
+        if(collision.gameObject.layer.Equals(LayerMask.NameToLayer("Obstacle"))
+            || collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground"))
+            || collision.gameObject.layer.Equals(LayerMask.NameToLayer("ClearPlatform")))
+        {
+            Hit = true;
+            Anim.SetTrigger("Hit");
+        }
     }
+
+    
 
 }

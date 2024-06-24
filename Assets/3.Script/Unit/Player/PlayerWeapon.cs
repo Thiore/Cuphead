@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject BulletPrefabs;
+    [SerializeField] private GameObject PlayerCol;
+    private CapsuleCollider2D capCol;
 
     private Animator Anim;
     private Coroutine Shoot_co = null;
@@ -17,9 +19,10 @@ public class PlayerWeapon : MonoBehaviour
     private void Awake()
     {
         Anim = GetComponent<Animator>();
+        capCol = PlayerCol.GetComponent<CapsuleCollider2D>();
         Initialize(15);
         //gameObject.SetActive(false);
-        delayTime = 0.5f;
+        delayTime = 0.2f;
         lastTime = Time.time;
 
     }
@@ -27,6 +30,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         if(isShoot)
         {
+            //Anim.SetTrigger("Shoot");
             Shooting();
         }
         
@@ -38,8 +42,9 @@ public class PlayerWeapon : MonoBehaviour
 
     private PlayerBullet CreateNewBullet()
     {
-        var newBullet = Instantiate(BulletPrefabs, transform).GetComponent<PlayerBullet>();
-        newBullet.transform.SetParent(null);
+        
+        var newBullet = Instantiate(BulletPrefabs, transform.position, Quaternion.identity).GetComponent<PlayerBullet>();
+        //newBullet.transform.SetParent(null);
         newBullet.GetComponent<PlayerBullet>().Initialize(this);
         newBullet.gameObject.SetActive(false);
         return newBullet;
@@ -111,19 +116,24 @@ public class PlayerWeapon : MonoBehaviour
             if (Bullets.Count > 0)
             {
                 var bullet = Bullets.Dequeue();
+                bullet.transform.position = transform.position;
+                Vector3 cappos = capCol.transform.position;
+                cappos.y-= 0.02f;
+                bullet.SetDir(transform.position - cappos);
 
-                bullet.transform.localRotation = transform.localRotation;
-                bullet.transform.localPosition = transform.localPosition;
                 bullet.gameObject.SetActive(true);
             }
             else
             {
                 var newBullet = CreateNewBullet();
+                newBullet.transform.position = transform.position;
+                Vector3 cappos = capCol.transform.position;
+                cappos.y -= 0.02f;
+                newBullet.SetDir(transform.position - cappos);
 
-                newBullet.transform.localRotation = transform.localRotation;
-                newBullet.transform.localPosition = transform.localPosition;
                 newBullet.gameObject.SetActive(true);
             }
         }
+        
     }
 }
