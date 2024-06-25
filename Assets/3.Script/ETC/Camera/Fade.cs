@@ -19,7 +19,7 @@ public class Fade : MonoBehaviour
     }
     private void Update()
     {
-        isFinishFade = false;
+        
         if(isFadeOut) // fadeIn
         {
             if(isStartFade)
@@ -30,13 +30,13 @@ public class Fade : MonoBehaviour
                 if (FadeAlpha.a <= 0f)
                 {
                     isStartFade = false;
-                    isFinishFade = true;
                 }
                     
             }
         }
         else
         {
+            Debug.Log("fadeout");
             if (isStartFade)
             {
                 Color FadeAlpha = image.color;
@@ -46,10 +46,11 @@ public class Fade : MonoBehaviour
                 {
                     Debug.Log("¿©±âµé¾î¿È?fade");
                     isStartFade = false;     
-                    isFinishFade = true;
                 }
             }
         }
+        isFinishFade = !isStartFade;
+        
 
     }
 

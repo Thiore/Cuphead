@@ -9,6 +9,8 @@ public class PlayerWeapon : MonoBehaviour
     private CapsuleCollider2D capCol;
 
     private Animator Anim;
+    private AudioSource _audio;
+    
     private Coroutine Shoot_co = null;
     private Queue<PlayerBullet> Bullets = new Queue<PlayerBullet>();
     private float lastTime;
@@ -20,6 +22,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         Anim = GetComponent<Animator>();
         capCol = PlayerCol.GetComponent<CapsuleCollider2D>();
+        _audio = GetComponent<AudioSource>();
         Initialize(15);
         //gameObject.SetActive(false);
         delayTime = 0.2f;
@@ -28,16 +31,16 @@ public class PlayerWeapon : MonoBehaviour
     }
     private void Update()
     {
-        if(isShoot)
+        if (isShoot)
         {
             //Anim.SetTrigger("Shoot");
             Shooting();
+            if (!_audio.isPlaying)
+                _audio.Play();
         }
+        else
+            _audio.Stop();
         
-
-
-
-
     }
 
     private PlayerBullet CreateNewBullet()
@@ -111,6 +114,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         if (Time.time > lastTime + delayTime)
         {
+            
             lastTime = Time.time;
             Anim.SetTrigger("Shoot");
             if (Bullets.Count > 0)

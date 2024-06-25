@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public enum eMain
 {
     Start = 0,
-    Options,
+    //Options,
     Exit
 };
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Text start;
-    [SerializeField] private Text option;
+    //[SerializeField] private Text option;
     [SerializeField] private Text exit;
     [SerializeField] private Key_Data Key;
     [SerializeField] private GameObject Setting;
@@ -37,9 +37,9 @@ public class MainMenu : MonoBehaviour
         FadeScreen.StartFadeIn();
         main = eMain.Start;
         start.color = SelectColor;
-        option.color = DefaultColor;
+        //option.color = DefaultColor;
         exit.color = DefaultColor;
-        
+        Enter = false;
     }
 
     private void Update()
@@ -68,22 +68,24 @@ public class MainMenu : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(Key.ShootKey))
             {
-                if(main.Equals(eMain.Options))
-                {
-                    Setting.SetActive(true);
-                }
-                else
-                {
+                //if(main.Equals(eMain.Options))
+                //{
+                //    Setting.SetActive(true);
+                //}
+                //else
+                //{
                     Enter = true;
                     FadeScreen.StartFadeOut();
-                }
+                //}
                
             }
 
+            
             if (Enter)
             {
                 if (main.Equals(eMain.Start))
                 {
+                    Debug.Log("Á¦¹ß");
                     if (FadeScreen.isFinish)
                         Scene_Manager.Instance.SetScene(eScene.Intro);
                 }
@@ -103,17 +105,17 @@ public class MainMenu : MonoBehaviour
         {
             case eMain.Start:
                 start.color = SelectColor;
-                option.color = DefaultColor;
+                //option.color = DefaultColor;
                 exit.color = DefaultColor;
                 break;
-            case eMain.Options:
-                start.color = DefaultColor;
-                option.color = SelectColor;
-                exit.color = DefaultColor;
-                break;
+            //case eMain.Options:
+            //    start.color = DefaultColor;
+            //    option.color = SelectColor;
+            //    exit.color = DefaultColor;
+            //    break;
             case eMain.Exit:
                 start.color = DefaultColor;
-                option.color = DefaultColor;
+                //option.color = DefaultColor;
                 exit.color = SelectColor;
                 break;
         }

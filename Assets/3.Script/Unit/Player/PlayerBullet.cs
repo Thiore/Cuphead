@@ -10,7 +10,8 @@ public class PlayerBullet : MonoBehaviour
     private Animator Anim;
 
     private PlayerWeapon weapon;
-    
+
+    private AudioSource _audio;
     
     private bool Hit = false;
     Vector3 Dir;
@@ -20,7 +21,7 @@ public class PlayerBullet : MonoBehaviour
         //cirCol = GetComponent<CircleCollider2D>();
         Anim = GetComponent<Animator>();
         move = GetComponent<Movement2D>();
-        
+        _audio = GetComponent<AudioSource>();
 
 
     }
@@ -77,7 +78,7 @@ public class PlayerBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log("왜 안맞음?");
-
+        _audio.Play();
         if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Enemy")))
         {
             Hit = true;

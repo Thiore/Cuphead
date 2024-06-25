@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    [SerializeField] private GameObject Child;
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer childRenderer;
     private int Hp = 15;
@@ -14,7 +15,7 @@ public class Target : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        childRenderer = GetComponentInChildren<SpriteRenderer>();
+        childRenderer = Child.GetComponent<SpriteRenderer>();
         Debug.Log(childRenderer.name);
     }
     private void Update()

@@ -17,14 +17,12 @@ public class IntroBook : MonoBehaviour
         FadeScreen = FadeObject.GetComponent<Fade>();
         FadeScreen.StartFadeIn();
         bookAnim = GetComponent<Animator>();
+        Game_Manager.Instance.isStartGame = true;
+        bookAnim.SetTrigger("Next");
     }
     private void Update()
     {
-        if (FadeScreen.isFade &&FadeScreen.isFinish)
-        {
-            Game_Manager.Instance.isStartGame = true;
-            bookAnim.SetTrigger("Next");
-        }
+        
             
 
         if(Game_Manager.Instance.isStartGame)

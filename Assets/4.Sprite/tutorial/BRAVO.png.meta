@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 8c2d1aeb6b8e64841a87eb744acb8044
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7381497605655590629
+    second: BRAVO_0
+  - first:
+      213: 5160826993029360496
+    second: BRAVO_1
+  - first:
+      213: -7732454899839544988
+    second: BRAVO_2
+  - first:
+      213: -6765137192342567235
+    second: BRAVO_3
+  - first:
+      213: -4489877868751082812
+    second: BRAVO_4
+  - first:
+      213: -8079219392405128585
+    second: BRAVO_5
+  - first:
+      213: 2825199490739121850
+    second: BRAVO_6
+  - first:
+      213: -2057794314117305836
+    second: BRAVO_7
+  - first:
+      213: -1310538501675871070
+    second: BRAVO_8
+  - first:
+      213: -6204158858146075077
+    second: BRAVO_9
+  - first:
+      213: -5689643559871152498
+    second: BRAVO_10
+  - first:
+      213: 218471692857597305
+    second: BRAVO_11
+  - first:
+      213: 7107663166962594232
+    second: BRAVO_12
+  - first:
+      213: 8091295841759276754
+    second: BRAVO_13
+  - first:
+      213: -5964996237899327794
+    second: BRAVO_14
+  - first:
+      213: 1913610144253802869
+    second: BRAVO_15
+  - first:
+      213: 8072011494782393638
+    second: BRAVO_16
+  - first:
+      213: -8024172589747002265
+    second: BRAVO_17
+  - first:
+      213: 8770698835211611211
+    second: BRAVO_18
+  - first:
+      213: 827676810920558178
+    second: BRAVO_19
+  - first:
+      213: -55928097448390322
+    second: BRAVO_20
+  - first:
+      213: 922742510605304735
+    second: BRAVO_21
+  - first:
+      213: 3796182116503654983
+    second: BRAVO_22
+  - first:
+      213: -6149648676654337228
+    second: BRAVO_23
+  - first:
+      213: -5323496216377418593
+    second: BRAVO_24
+  - first:
+      213: -2723296025733220712
+    second: BRAVO_25
+  - first:
+      213: -1481314308972676840
+    second: BRAVO_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BRAVO_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5798
+        width: 1275
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1980885907af8990800000000000000
+      internalID: -7381497605655590629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_1
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 5798
+        width: 1276
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b23c29ec0fe9740800000000000000
+      internalID: 5160826993029360496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_2
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 5797
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461d555ac3dc0b490800000000000000
+      internalID: -7732454899839544988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5072
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db643a911976d12a0800000000000000
+      internalID: -6765137192342567235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_4
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 5072
+        width: 1276
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca2434eddfb0b1c0800000000000000
+      internalID: -4489877868751082812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_5
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 5072
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77abe35a4c8d0ef80800000000000000
+      internalID: -8079219392405128585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4347
+        width: 1275
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abeae11e7ff153720800000000000000
+      internalID: 2825199490739121850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_7
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 4347
+        width: 1276
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a283659fe3173e0800000000000000
+      internalID: -2057794314117305836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_8
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 4344
+        width: 1275
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4132f1d2800dde0800000000000000
+      internalID: -1310538501675871070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3624
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e2c1ab36666e9a0800000000000000
+      internalID: -6204158858146075077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_10
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 3624
+        width: 1276
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e7a4bc3535a01b0800000000000000
+      internalID: -5689643559871152498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_11
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 3624
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d514ed8da280300800000000000000
+      internalID: 218471692857597305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2899
+        width: 1275
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1fee90efd73a260800000000000000
+      internalID: 7107663166962594232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_13
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 2899
+        width: 1276
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de28a4d2be0a4070800000000000000
+      internalID: 8091295841759276754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_14
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 2899
+        width: 1275
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec618798683183da0800000000000000
+      internalID: -5964996237899327794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2177
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579f4d699428e8a10800000000000000
+      internalID: 1913610144253802869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_16
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 2177
+        width: 1276
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ddf59efab850070800000000000000
+      internalID: 8072011494782393638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_17
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 2177
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76424b32b8964a090800000000000000
+      internalID: -8024172589747002265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1451
+        width: 1279
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c68b81f18c7b970800000000000000
+      internalID: 8770698835211611211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_19
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1451
+        width: 1276
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e7fbf9caf7c7b00800000000000000
+      internalID: 827676810920558178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_20
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 1451
+        width: 1275
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4110a211bd493ff0800000000000000
+      internalID: -55928097448390322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_21
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 729
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9308cbac6d3ecc00800000000000000
+      internalID: 922742510605304735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_22
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 729
+        width: 1276
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74214ec958fbea430800000000000000
+      internalID: 3796182116503654983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_23
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 729
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433319e5c1f08aaa0800000000000000
+      internalID: -6149648676654337228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c10b375642f16b0800000000000000
+      internalID: -5323496216377418593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_25
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 4
+        width: 1276
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89630f771b8e43ad0800000000000000
+      internalID: -2723296025733220712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BRAVO_26
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 4
+        width: 1275
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819fafcfb70517be0800000000000000
+      internalID: -1481314308972676840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

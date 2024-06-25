@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Game_Manager : SingleTon<Game_Manager>
 {
-    public bool isStartGame;
+    public bool isStartGame = false;
+    public bool isFinish = false;
     protected override void Awake()
     {
         base.Awake();
-        isStartGame = false;
     }
 }

@@ -11,7 +11,12 @@ public class PlayerControl : Unit
     [SerializeField] private GameObject Weapon;
     [SerializeField] private GameObject dustPrefabs_1;
     [SerializeField] private GameObject dustPrefabs_2;
-
+    [SerializeField] private AudioClip DashClip;
+    [SerializeField] private AudioClip JumpClip;
+    [SerializeField] private AudioClip LandClip;
+    [SerializeField] private AudioClip Walk1Clip;
+    [SerializeField] private AudioClip Walk2Clip;
+    private AudioSource _audio;
 
 
     private GameObject[] DustPrefabs = new GameObject[4];
@@ -86,6 +91,7 @@ public class PlayerControl : Unit
         playerCol = GetComponent<BoxCollider2D>();
         weaponSprite = Weapon.GetComponent<SpriteRenderer>();
         playerWeapon = Weapon.GetComponent<PlayerWeapon>();
+        _audio = GetComponent<AudioSource>();
         isCurrentDir = isLastDir;
 
 
@@ -101,6 +107,7 @@ public class PlayerControl : Unit
 
     private void FixedUpdate()
     {
+        if(Game_Manager.Instance.isStartGame)
         if (!isDash)
             Move_Horizontal();
     }
@@ -921,10 +928,16 @@ public class PlayerControl : Unit
         }
         if (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Interaction")))
         {
-            if(Input.GetKeyDown(keyData.ShootKey))
+            if(!Game_Manager.Instance.isFinish)
             {
-                Scene_Manager.Instance.SetScene(eScene.Menu);
+                if (Input.GetKey(keyData.ShootKey))
+                {
+                    Game_Manager.Instance.isStartGame = false;
+                    Game_Manager.Instance.isFinish = true;
+
+                }
             }
+            
         }
     }
 }

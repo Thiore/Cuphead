@@ -23,7 +23,9 @@ public class SizeofCamera : MonoBehaviour
         if (isSetSize)
             ResizeTextureToCamera();
     }
-    
+
+   
+
     public Vector3 ClickPos(Vector3 MousePos)
     {
         //if (Input.GetMouseButtonDown(0))
@@ -38,7 +40,7 @@ public class SizeofCamera : MonoBehaviour
     }
     
 
-    private void ResizeTextureToCamera()
+    public void ResizeTextureToCamera()
     {
         if(renderCamera == null)
             renderCamera = Camera.main;
