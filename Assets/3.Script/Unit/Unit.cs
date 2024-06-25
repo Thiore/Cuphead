@@ -64,6 +64,7 @@ public abstract class Unit : MonoBehaviour
     {
         if (!Anim.GetBool(Anim_bRun).Equals(isRun))
             Anim.SetBool(Anim_bRun, isRun);
+        
     }
     protected virtual void Jump()
     {

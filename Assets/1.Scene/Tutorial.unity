@@ -6155,8 +6155,9 @@ MonoBehaviour:
   DashClip: {fileID: 8300000, guid: 9cf0f64465fda6d48832e642f718522d, type: 3}
   JumpClip: {fileID: 8300000, guid: ca22dc63d5438c940b9b2cfc85d4a237, type: 3}
   LandClip: {fileID: 8300000, guid: 0cf32a994ead509489bf109df262ee07, type: 3}
-  Walk1Clip: {fileID: 8300000, guid: cd8c63ef7be1d214783014a4ba6ac9bc, type: 3}
-  Walk2Clip: {fileID: 8300000, guid: 4093c6ee8220c694c82b553d103861bf, type: 3}
+  WalkClip:
+  - {fileID: 8300000, guid: cd8c63ef7be1d214783014a4ba6ac9bc, type: 3}
+  - {fileID: 8300000, guid: 4093c6ee8220c694c82b553d103861bf, type: 3}
 --- !u!114 &1121417376
 MonoBehaviour:
   m_ObjectHideFlags: 0

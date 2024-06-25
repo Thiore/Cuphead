@@ -36,11 +36,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Dust2Tex:
-        m_Texture: {fileID: 2800000, guid: 22bd269ce00f55c40978ce09fe594afe, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9cc92541c614702499ffdb17098a09f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DustTex:
-        m_Texture: {fileID: 2800000, guid: 969051d577da8a646b28e6ad29b9a727, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8db49a975fb421b4ca55a8f9f6c6e263, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:

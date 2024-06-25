@@ -14,8 +14,7 @@ public class PlayerControl : Unit
     [SerializeField] private AudioClip DashClip;
     [SerializeField] private AudioClip JumpClip;
     [SerializeField] private AudioClip LandClip;
-    [SerializeField] private AudioClip Walk1Clip;
-    [SerializeField] private AudioClip Walk2Clip;
+    [SerializeField] private AudioClip[] WalkClip;
     private AudioSource _audio;
 
 
@@ -27,8 +26,8 @@ public class PlayerControl : Unit
 
     
     private float Speed = 5f;
- 
-    
+
+    private bool iswalk = false;
     private bool isAnimTurn = false;
     private bool isZeroDuration = false;
     private bool isAim = false;
@@ -52,6 +51,8 @@ public class PlayerControl : Unit
     private bool[] isAimDir = { false, false, false };
     
     private float AnimDuration;
+    private float WalkLastTime = 0f;
+    private float WalkDelayTime = 0.1f;
 
     private int AimDir = 0;
     private int StraightAim = 1;
@@ -189,8 +190,28 @@ public class PlayerControl : Unit
 
         isLastDir = isCurrentDir;
         WallofCollider();
+        if((StateInfo.IsName("Run")|| StateInfo.IsName("RunShooting_Straight") || StateInfo.IsName("RunShooting_DiagonalUp"))
+        &&Time.time>WalkLastTime+WalkDelayTime)
+        {
+        WalkLastTime = Time.time;
+            if(!_audio.isPlaying)
+            {
+                int walkcount;
+                iswalk = !iswalk;
+                if (iswalk)
+                    walkcount = 0;
+                else
+                    walkcount = 1;
+                _audio.clip = WalkClip[walkcount];
+                _audio.Play();
+            }
 
-        
+        }
+        else
+        {
+            if(_audio.clip == WalkClip[0]|| _audio.clip == WalkClip[1])
+             _audio.Stop();
+        }
 
 
         move.MoveTo(new Vector3(x, y, 0), Speed);
@@ -287,6 +308,9 @@ public class PlayerControl : Unit
                         }
                         else
                         {
+                            _audio.Stop();
+                            _audio.clip = JumpClip;
+                            _audio.Play();
                             isJump = true;
                             base.Jump();
                         }
@@ -370,7 +394,9 @@ public class PlayerControl : Unit
                 Anim.SetBool(Anim_bAttack, isAttack);
                 //Rigid.simulated = false;
                 isLastDir = isCurrentDir;
-
+                _audio.Stop();
+                _audio.clip = DashClip;
+                _audio.Play();
                 if (Anim.GetBool(Anim_bJump))
                 {
                     Anim.SetTrigger(Anim_tDash);
@@ -415,12 +441,14 @@ public class PlayerControl : Unit
             yield return null;
         }
        
+       
         yield return new WaitForSeconds(AnimDuration-(AnimDuration*0.1f));
         isDash = false;
         Rigid.gravityScale = GravityScale;
         Rigid.velocity = Vector2.zero;
         Speed = 5f;
         isZeroDuration = false;
+        _audio.Stop();
         dashCorutine = null;
         yield break;
     }
@@ -440,6 +468,7 @@ public class PlayerControl : Unit
             }
             yield return null;
         }
+        
         //Debug.Log(AnimDuration);
         //Debug.Log(AnimDuration - (AnimDuration * 0.1f));
         yield return new WaitForSeconds(AnimDuration - (AnimDuration * 0.1f));
@@ -448,6 +477,7 @@ public class PlayerControl : Unit
         Rigid.velocity = Vector2.zero;
         Rigid.simulated = true;        
         Speed = 5f;
+        _audio.Stop();
         isZeroDuration = false;
         dashCorutine = null;
         yield break;
@@ -848,6 +878,8 @@ public class PlayerControl : Unit
         //Debug.Log(collision.contacts[0].normal.y);
         if (Mathf.Abs(collision.contacts[0].normal.y - 1f) < 0.1f)
         {
+            _audio.clip = LandClip;
+            _audio.Play();
             isJump = false;
             Anim.SetBool(Anim_bJump, isJump);
             isDashGround = true;
