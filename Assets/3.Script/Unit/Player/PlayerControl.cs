@@ -129,18 +129,17 @@ public class PlayerControl : Unit
 
         if (Input.GetKeyDown(keyData.ShootKey)&&!isDash)
         {
-
-            playerWeapon.Shoot = true;
-
             isAttack = true;
             Anim.SetBool(Anim_bAttack, isAttack);
         }
         
         if (Input.GetKeyUp(keyData.ShootKey))
         {
-            playerWeapon.Shoot = false;
             isAttack = false;
             Anim.SetBool(Anim_bAttack, isAttack);
+            playerWeapon.Shoot = false;
+            Weapon.transform.rotation = Quaternion.identity;
+            Weapon.transform.position = capCol.transform.position;
         }
         if (isRun && isAttack && Input.GetKey(keyData.UpKey))
         {
@@ -165,8 +164,10 @@ public class PlayerControl : Unit
 
         if (isAttack)
         {
+            
             if (StateInfo.IsName("Jump"))
             {
+                
                 JumpShoot();
             }
             else
@@ -176,15 +177,6 @@ public class PlayerControl : Unit
                
                 //WeaponAnim.SetBool("Shoot", true);
            
-        }
-        else
-        {
-            playerWeapon.Shoot = false;
-            Weapon.transform.position = capCol.transform.position;
-                Weapon.transform.rotation = Quaternion.identity;
-               // playerWeapon.StopAttack_co();
-            
-                
         }
         
 
@@ -623,12 +615,12 @@ public class PlayerControl : Unit
             SetWeaponPos();
             if (spriteRenderer.flipX)// 哭率
             {
-                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.4f + Vector3.up * capCol.size.y*0.4f;
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.5f + Vector3.up * capCol.size.y*0.3f;
                 Weapon.transform.rotation = Quaternion.Euler(0, 0, -40f);
             }
             else
             {
-                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.4f + Vector3.up * capCol.size.y * 0.4f;
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.5f + Vector3.up * capCol.size.y * 0.3f;
                 Weapon.transform.rotation = Quaternion.Euler(0, 0, 40f);
                 
             }
@@ -641,11 +633,11 @@ public class PlayerControl : Unit
             if (spriteRenderer.flipX)// 哭率
             {
                 
-                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.2f+ Vector3.up * capCol.size.y * 0.6f;
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.2f+ Vector3.up * capCol.size.y * 0.5f;
             }
             else
             {
-                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.2f + Vector3.up * capCol.size.y * 0.6f;
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.2f + Vector3.up * capCol.size.y * 0.5f;
             }
             Weapon.transform.rotation = Quaternion.Euler(0, 0, 90f);
         }
@@ -655,11 +647,11 @@ public class PlayerControl : Unit
             
             if (spriteRenderer.flipX)// 哭率
             {
-                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.2f + Vector3.down * capCol.size.y * 0.6f;
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.2f + Vector3.down * capCol.size.y * 0.5f;
             }
             else
             {
-                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.2f + Vector3.down * capCol.size.y * 0.6f;
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.2f + Vector3.down * capCol.size.y * 0.5f;
             }
             Weapon.transform.rotation = Quaternion.Euler(0, 0, -90f);
         }
@@ -668,24 +660,23 @@ public class PlayerControl : Unit
             SetWeaponPos();
             if (spriteRenderer.flipX)// 哭率
             {
-                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.4f + Vector3.down * capCol.size.y * 0.4f;
-                Weapon.transform.rotation = Quaternion.Euler(0, 0, 40f);
+                Weapon.transform.position = capCol.transform.position + Vector3.left * capCol.size.x * 0.55f + Vector3.down * capCol.size.y * 0.3f;
+                Weapon.transform.rotation = Quaternion.Euler(0, 0, 50f);
             }
             else
             {
-                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.4f + Vector3.down * capCol.size.y * 0.4f;
-                Weapon.transform.rotation = Quaternion.Euler(0, 0, -40f);
+                Weapon.transform.position = capCol.transform.position + Vector3.right * capCol.size.x * 0.55f + Vector3.down * capCol.size.y * 0.3f;
+                Weapon.transform.rotation = Quaternion.Euler(0, 0, -50f);
 
             }
         }
         else
         {
+            playerWeapon.Shoot = false;
             Weapon.transform.rotation = Quaternion.identity;
             Weapon.transform.position = capCol.transform.position;
-                
-                playerWeapon.Shoot = false;
-            
-        }    
+        }
+          
         
     }
 
@@ -693,8 +684,9 @@ public class PlayerControl : Unit
     {
 
         playerWeapon.Shoot = true;
-        Weapon.transform.rotation = Quaternion.identity;
-        Weapon.transform.position = capCol.transform.position;
+       
+        //Weapon.transform.rotation = Quaternion.identity;
+        //Weapon.transform.position = capCol.transform.position;
        
         
 
@@ -703,8 +695,9 @@ public class PlayerControl : Unit
 
     private void JumpShoot()
     {
-        playerWeapon.Shoot = true;
-        
+        SetWeaponPos();
+
+
         if ((Input.GetKey(keyData.RightKey)) && !isLeft)
         {
             isAimDir[0] = true;
@@ -783,8 +776,7 @@ public class PlayerControl : Unit
             }
         }
 
-        Weapon.transform.position = capCol.transform.position;
-        Weapon.transform.rotation = Quaternion.identity;
+        
         switch(AimDir)
         {
             

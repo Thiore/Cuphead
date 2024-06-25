@@ -65,13 +65,13 @@ public class PlayerWeapon : MonoBehaviour
             if(Bullets.Count>0)
             {
                 var bullet = Bullets.Dequeue();
-                bullet.transform.SetParent(null);
+                //bullet.transform.SetParent(null);
                 bullet.gameObject.SetActive(true);
             }
             else
             {
                 var newBullet = CreateNewBullet();
-                newBullet.transform.SetParent(null);
+                //newBullet.transform.SetParent(null);
                 newBullet.gameObject.SetActive(true);
             }
             yield return new WaitForSeconds(0.2f);
@@ -98,7 +98,7 @@ public class PlayerWeapon : MonoBehaviour
         if (Bullets.Count < 15)
         {
             bul.gameObject.SetActive(false);
-            bul.transform.SetParent(transform);
+            //bul.transform.SetParent(transform);
 
             Bullets.Enqueue(bul);
         }
@@ -116,22 +116,23 @@ public class PlayerWeapon : MonoBehaviour
             if (Bullets.Count > 0)
             {
                 var bullet = Bullets.Dequeue();
+                bullet.gameObject.SetActive(true);
                 bullet.transform.position = transform.position;
                 Vector3 cappos = capCol.transform.position;
                 cappos.y-= 0.02f;
                 bullet.SetDir(transform.position - cappos);
-
-                bullet.gameObject.SetActive(true);
+                
             }
             else
             {
                 var newBullet = CreateNewBullet();
+                newBullet.gameObject.SetActive(true);
                 newBullet.transform.position = transform.position;
                 Vector3 cappos = capCol.transform.position;
                 cappos.y -= 0.02f;
                 newBullet.SetDir(transform.position - cappos);
 
-                newBullet.gameObject.SetActive(true);
+                
             }
         }
         

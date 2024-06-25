@@ -6,19 +6,19 @@ public class Target : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer childRenderer;
-    private int Hp = 5;
-    Color HitColor = new Color(103f, 131f, 255f);
-    
+    private int Hp = 15;
+    Color HitColor = new Color(103f / 255f, 131f / 255f, 255f / 255f);
+
     private Coroutine Hit_co = null;
 
     private void Start()
     {
-        TryGetComponent(out spriteRenderer);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        childRenderer = GetComponentInChildren<SpriteRenderer>();
+        Debug.Log(childRenderer.name);
     }
     private void Update()
     {
-        //Debug.Log(HitColor);
-        spriteRenderer.color = HitColor;
         if (Hp<=0)
         {
             gameObject.SetActive(false);
@@ -27,13 +27,19 @@ public class Target : MonoBehaviour
 
     public void StartHit()
     {
+        
         if(Hit_co == null)
-            Hit_co = StartCoroutine(HitTarget());
-        if(Hit_co != null)
         {
+            
+            Hit_co = StartCoroutine(HitTarget());
+        }
+        else
+        {
+            Debug.Log("여기맞음?");
             StopCoroutine(HitTarget());
             Hit_co = null;
             spriteRenderer.color = Color.white;
+            Hit_co = StartCoroutine(HitTarget());
         }
 
     }
@@ -41,9 +47,19 @@ public class Target : MonoBehaviour
     private IEnumerator HitTarget()
     {
         Hp -= 1;
+        
         spriteRenderer.color = HitColor;
-        yield return new WaitForSeconds(0.3f);
+        childRenderer.color = HitColor;
+        yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
+        childRenderer.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = HitColor;
+        childRenderer.color = HitColor;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = Color.white;
+        childRenderer.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
         Hit_co = null;
 
     }

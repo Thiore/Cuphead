@@ -27,8 +27,16 @@ public class PlayerBullet : MonoBehaviour
     private void Update()
     {
         if(!Hit)
-            move.MoveTo(Dir, 12f);
-        Debug.Log(Dir);
+        {
+            transform.position += Dir * 12f * Time.deltaTime; 
+
+            
+
+        }
+
+        ////Debug.Log(Dir);
+        ////Debug.Log("position : " + transform.position);
+        ////Debug.Log("rotation : " + transform.rotation);
 
         if (Hit)
         {
@@ -38,21 +46,26 @@ public class PlayerBullet : MonoBehaviour
                 if (info.normalizedTime < 1)
                     return;
                 else
+                {
+                    Hit = false;
+                    Dir = Vector3.zero;
+                    transform.localRotation = Quaternion.identity;
                     weapon.EnqueueBullet(this);
+                }
+                    
             }
         }
     }
 
     public void SetDir(Vector3 dir)
     {
+        Debug.Log("¾ê°¡ ¹Ù²î³ª?");
         this.Dir = dir;
         float angle = Mathf.Atan2(Dir.y, Dir.x) * Mathf.Rad2Deg;
         
-        transform.localRotation = Quaternion.identity;
+        
         
         transform.localRotation = Quaternion.Euler(0, 0, angle);
-       
-
 
     }
 
@@ -69,6 +82,7 @@ public class PlayerBullet : MonoBehaviour
         {
             Hit = true;
             Anim.SetTrigger("Hit");
+            Debug.Log(collision.gameObject.name);
             collision.gameObject.GetComponent<Target>().StartHit();
 
         }
